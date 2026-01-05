@@ -21,7 +21,7 @@ int main()
         1, 2, 3    // second triangle
     };
     
-    Shader testShader = Shader(vertices, indices, 12, "shaders/vertex.vs", "shaders/fragment.fs");
+    Shader testShader = Shader("shaders/vertex.vs", "shaders/fragment.fs");
     Renderer renderer = Renderer(window);
 
     renderer.Render(&testShader);

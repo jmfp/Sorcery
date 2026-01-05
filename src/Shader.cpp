@@ -19,25 +19,7 @@ std::string ReadShaderFile(const std::string& filePath){
     return buffer.str();
 }
 
-Shader::Shader(float vertices[], GLuint indices[], int vertexCount, std::string vertexShader, std::string fragmentShader, GLenum usage){
-    this->vertexCount = vertexCount;
-    glGenVertexArrays(1, &VAO);
-    glBindVertexArray(VAO);
-    
-    // Vertex data
-    glGenBuffers(1, &VBO);
-    glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    glBufferData(GL_ARRAY_BUFFER, vertexCount * sizeof(vertices), vertices, usage);
-
-    // Element buffer object
-    glGenBuffers(1, &EBO);
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, vertexCount * sizeof(indices), indices, GL_STATIC_DRAW);
-
-    // Vertex attributes
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
-    glEnableVertexAttribArray(0);  
-
+Shader::Shader(std::string vertexShader, std::string fragmentShader){
     // Shader
     std::string vertexShaderSource = ReadShaderFile(vertexShader);
     const char * sourceCStr = vertexShaderSource.c_str();
@@ -47,7 +29,6 @@ Shader::Shader(float vertices[], GLuint indices[], int vertexCount, std::string 
     glShaderSource(vertexShaderProgram, 1, &sourceCStr, NULL);
     glCompileShader(vertexShaderProgram);
 
-
     std::string fragmentShaderSource = ReadShaderFile(fragmentShader);
     const char * sourceCStrFrag = fragmentShaderSource.c_str();
 
@@ -55,27 +36,35 @@ Shader::Shader(float vertices[], GLuint indices[], int vertexCount, std::string 
     glShaderSource(fragmentShaderProgram, 1, &sourceCStrFrag, NULL);
     glCompileShader(fragmentShaderProgram);
     // Shader program
-    shaderProgram = glCreateProgram();
+    ID = glCreateProgram();
+    glAttachShader(ID, vertexShaderProgram);
+    glAttachShader(ID, fragmentShaderProgram);
+    glLinkProgram(ID);
 
-
-
-    glAttachShader(shaderProgram, vertexShaderProgram);
-    glAttachShader(shaderProgram, fragmentShaderProgram);
-    glLinkProgram(shaderProgram);
-
-    // glUseProgram(shaderProgram);
-    // glBindVertexArray(VAO);
-    // glDrawArrays(GL_TRIANGLES, 0, 3);
+    glDeleteShader(fragmentShaderProgram);
+    glDeleteShader(vertexShaderProgram);
 };
 
 void Shader::Use(){
-    glUseProgram(shaderProgram);
+    glUseProgram(ID);
 }
 
 void Shader::Draw(){
-    glBindVertexArray(VAO);
     glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
-    glBindVertexArray(0);
+}
+
+void Shader::SetBool(const std::string &name, bool value)
+{         
+    glUniform1i(glGetUniformLocation(ID, name.c_str()), (int)value); 
+}
+
+void Shader::SetInt(const std::string &name, int value)
+{ 
+    glUniform1i(glGetUniformLocation(ID, name.c_str()), value); 
+}
+void Shader::SetFloat(const std::string &name, float value)
+{ 
+    glUniform1f(glGetUniformLocation(ID, name.c_str()), value); 
 }
 
 Shader::~Shader(){

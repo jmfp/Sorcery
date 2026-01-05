@@ -273,6 +273,30 @@ src/Shader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Shader.cpp.s
 .PHONY : src/Shader.cpp.s
 
+src/Texture.o: src/Texture.cpp.o
+.PHONY : src/Texture.o
+
+# target to build an object file
+src/Texture.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Texture.cpp.o
+.PHONY : src/Texture.cpp.o
+
+src/Texture.i: src/Texture.cpp.i
+.PHONY : src/Texture.i
+
+# target to preprocess a source file
+src/Texture.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Texture.cpp.i
+.PHONY : src/Texture.cpp.i
+
+src/Texture.s: src/Texture.cpp.s
+.PHONY : src/Texture.s
+
+# target to generate assembly for a file
+src/Texture.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Texture.cpp.s
+.PHONY : src/Texture.cpp.s
+
 src/Window.o: src/Window.cpp.o
 .PHONY : src/Window.o
 
@@ -296,6 +320,30 @@ src/Window.s: src/Window.cpp.s
 src/Window.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Window.cpp.s
 .PHONY : src/Window.cpp.s
+
+src/stb_image.o: src/stb_image.cpp.o
+.PHONY : src/stb_image.o
+
+# target to build an object file
+src/stb_image.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/stb_image.cpp.o
+.PHONY : src/stb_image.cpp.o
+
+src/stb_image.i: src/stb_image.cpp.i
+.PHONY : src/stb_image.i
+
+# target to preprocess a source file
+src/stb_image.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/stb_image.cpp.i
+.PHONY : src/stb_image.cpp.i
+
+src/stb_image.s: src/stb_image.cpp.s
+.PHONY : src/stb_image.s
+
+# target to generate assembly for a file
+src/stb_image.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/stb_image.cpp.s
+.PHONY : src/stb_image.cpp.s
 
 # Help Target
 help:
@@ -324,9 +372,15 @@ help:
 	@echo "... src/Shader.o"
 	@echo "... src/Shader.i"
 	@echo "... src/Shader.s"
+	@echo "... src/Texture.o"
+	@echo "... src/Texture.i"
+	@echo "... src/Texture.s"
 	@echo "... src/Window.o"
 	@echo "... src/Window.i"
 	@echo "... src/Window.s"
+	@echo "... src/stb_image.o"
+	@echo "... src/stb_image.i"
+	@echo "... src/stb_image.s"
 .PHONY : help
 
 

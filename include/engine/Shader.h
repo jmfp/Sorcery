@@ -5,14 +5,12 @@
 
 class Shader{
     public:
-        Shader(float vertices[], GLuint indices[], int vertexCount, std::string vertexShader, std::string fragmentShader, GLenum usage = GL_STATIC_DRAW);
+        Shader(std::string vertexShader, std::string fragmentShader);
         ~Shader();
         void Use();
         void Draw();
-    private:
-        GLuint VBO;
-        GLuint VAO;
-        GLuint EBO;
-        GLuint shaderProgram;
-        int vertexCount;
+        void SetBool(const std::string &name, bool value);
+        void SetInt(const std::string &name, int value);
+        void SetFloat(const std::string &name, float value);
+        GLuint ID;
 };
