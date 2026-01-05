@@ -7,7 +7,7 @@ Renderer::Renderer(Window* window){
 
 void Renderer::Render(Shader* shader){
     // Set viewport
-    glViewport(0, 0, 800, 400);
+    glViewport(0, 0, 800, 800);
     ///////////////////////////////////////
     ////// This is test stuff /////////////
     ///////////////////////////////////////
