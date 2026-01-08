@@ -66,6 +66,14 @@ void Shader::SetFloat(const std::string &name, float value)
 { 
     glUniform1f(glGetUniformLocation(ID, name.c_str()), value); 
 }
+// void setVec2(const std::string &name, const glm::vec2 &value)
+// { 
+//     glUniform2fv(glGetUniformLocation(ID, name.c_str()), 1, &value[0]); 
+// }
+// void setVec2(const std::string &name, float x, float y)
+// { 
+//     glUniform2f(glGetUniformLocation(ID, name.c_str()), x, y); 
+// }
 
 Shader::~Shader(){
     // glDeleteShader(vertexShaderProgram);

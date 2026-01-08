@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/OpenGL.dir/include/glad/glad.c.o.d"
   "CMakeFiles/OpenGL.dir/main.cpp.o"
   "CMakeFiles/OpenGL.dir/main.cpp.o.d"
+  "CMakeFiles/OpenGL.dir/src/Camera.cpp.o"
+  "CMakeFiles/OpenGL.dir/src/Camera.cpp.o.d"
   "CMakeFiles/OpenGL.dir/src/Component.cpp.o"
   "CMakeFiles/OpenGL.dir/src/Component.cpp.o.d"
   "CMakeFiles/OpenGL.dir/src/GameObject.cpp.o"

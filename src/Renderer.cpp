@@ -1,16 +1,27 @@
 #include <engine/Renderer.h>
 #include <engine/Texture.h>
 
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
+#include <engine/Camera.h>
+
 Renderer::Renderer(Window* window){
     this->window = window;
 }
 
 void Renderer::Render(Shader* shader){
-    // Set viewport
-    glViewport(0, 0, 800, 800);
+    //Camera
+    // TODO: have renderer use a camera as a parameter so that we can pass either 2d or 3d
+    Camera camera;
+    glfwSetWindowUserPointer(window->GetWindow(), &camera);
+    int framebufferWidth, framebufferHeight;
+    glfwGetFramebufferSize(window->GetWindow(), &framebufferWidth, &framebufferHeight);
+    glViewport(0, 0, framebufferWidth, framebufferHeight);
     ///////////////////////////////////////
     ////// This is test stuff /////////////
     ///////////////////////////////////////
+    glEnable(GL_DEPTH_TEST);
     Texture testTexture = Texture("../src/textures/wall.jpg", 16, 16);
     float vertices[] = {
         // positions          // colors           // texture coords
@@ -51,13 +62,59 @@ void Renderer::Render(Shader* shader){
     // Render loop
     while(!glfwWindowShouldClose(window->GetWindow()))
     {
+        // Calculate delta time
+        static float lastFrame = 0.0f;
+        float currentFrame = glfwGetTime();
+        float deltaTime = currentFrame - lastFrame;
+        lastFrame = currentFrame;
+
+        int framebufferWidth, framebufferHeight;
+        glfwGetFramebufferSize(window->GetWindow(), &framebufferWidth, &framebufferHeight);
+        glViewport(0, 0, framebufferWidth, framebufferHeight);
+        
+        glm::mat4 projection = glm::perspective(
+            glm::radians(camera.GetZoom()),
+            (float)framebufferWidth / (float)framebufferHeight,
+            0.1f,
+            100.0f
+        );
+
+        glm::mat4 view = camera.GetViewMatrix();
+
+        window->ProcessInput(camera, deltaTime);
+
         // Render
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
-        glClear(GL_COLOR_BUFFER_BIT);
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-        shader->Use();
         // shader->Draw();
         glBindTexture(GL_TEXTURE_2D, testTexture.GetTexture());
+        
+        /////////////////////////////////////
+        //////This is test stuff/////////////
+        /////////////////////////////////////
+        shader->Use();
+        
+        // glm::mat4 transform = glm::mat4(1.0f);
+        glm::mat4 model = glm::mat4(1.0f);
+        model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f)); // position in world
+        model = glm::rotate(model, (float)glfwGetTime() * glm::radians(50.0f),
+        glm::vec3(0.5f, 1.0f, 0.0f)); // rotation around an axis
+        // view matrix is already set above from camera.GetViewMatrix()
+        
+        unsigned int modelLoc = glGetUniformLocation(shader->ID, "model");
+        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+        
+        unsigned int viewLoc = glGetUniformLocation(shader->ID, "view");
+        glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
+        
+        unsigned int projLoc = glGetUniformLocation(shader->ID, "projection");
+        glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
+        // unsigned int modelLoc = glGetUniformLocation(shader->ID, "model");
+        // glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+        /////////////////////////////////////
+        /////////////////////////////////////
+        /////////////////////////////////////
         glBindVertexArray(VAO);
         glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 

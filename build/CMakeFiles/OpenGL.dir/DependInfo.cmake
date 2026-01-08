@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glad/glad.c" "CMakeFiles/OpenGL.dir/include/glad/glad.c.o" "gcc" "CMakeFiles/OpenGL.dir/include/glad/glad.c.o.d"
   "/Users/jesseprice/Development/Personal/Britemune/OpenGL/main.cpp" "CMakeFiles/OpenGL.dir/main.cpp.o" "gcc" "CMakeFiles/OpenGL.dir/main.cpp.o.d"
+  "/Users/jesseprice/Development/Personal/Britemune/OpenGL/src/Camera.cpp" "CMakeFiles/OpenGL.dir/src/Camera.cpp.o" "gcc" "CMakeFiles/OpenGL.dir/src/Camera.cpp.o.d"
   "/Users/jesseprice/Development/Personal/Britemune/OpenGL/src/Component.cpp" "CMakeFiles/OpenGL.dir/src/Component.cpp.o" "gcc" "CMakeFiles/OpenGL.dir/src/Component.cpp.o.d"
   "/Users/jesseprice/Development/Personal/Britemune/OpenGL/src/GameObject.cpp" "CMakeFiles/OpenGL.dir/src/GameObject.cpp.o" "gcc" "CMakeFiles/OpenGL.dir/src/GameObject.cpp.o.d"
   "/Users/jesseprice/Development/Personal/Britemune/OpenGL/src/Renderer.cpp" "CMakeFiles/OpenGL.dir/src/Renderer.cpp.o" "gcc" "CMakeFiles/OpenGL.dir/src/Renderer.cpp.o.d"
