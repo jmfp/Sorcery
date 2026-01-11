@@ -9,9 +9,9 @@ int main()
 {
     // Initialize GLFW
     Window* window = new Window();
-    window->Initialize("Game Name", 800, 800);
-    Shader testShader = Shader("shaders/vertex.vs", "shaders/fragment.fs");
-    Renderer renderer = Renderer(window);
+    window->Initialize("Game Name", 1920, 1080);
+    Shader testShader = Shader("shaders/container.vs", "shaders/container.fs");
+    Renderer3D renderer = Renderer3D(window);
 
     renderer.Render(&testShader);
     return 0;
