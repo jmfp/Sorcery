@@ -241,6 +241,8 @@ OpenGL: CMakeFiles/OpenGL.dir/include/glad/glad.c.o
 OpenGL: CMakeFiles/OpenGL.dir/build.make
 OpenGL: /Users/jesseprice/Development/Personal/Britemune/OpenGL/lib/libglfw3.a
 OpenGL: /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework
+OpenGL: _deps/assimp-build/bin/libassimp.5.3.0.dylib
+OpenGL: /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libz.tbd
 OpenGL: CMakeFiles/OpenGL.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable OpenGL"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/OpenGL.dir/link.txt --verbose=$(VERBOSE)

@@ -5,7 +5,7 @@
 # compile CXX with /usr/bin/c++
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glad -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/GLFW -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/KHR -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks
+C_INCLUDES = -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glad -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/GLFW -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/KHR -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-build/code/../include -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks
 
 C_FLAGSarm64 =  -arch arm64
 
@@ -13,7 +13,7 @@ C_FLAGS =  -arch arm64
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glad -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/GLFW -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/KHR -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks
+CXX_INCLUDES = -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glad -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/GLFW -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/KHR -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-build/code/../include -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks
 
 CXX_FLAGSarm64 = -std=gnu++2b -arch arm64
 

@@ -7,6 +7,18 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # Find OpenGL
 find_package(OpenGL REQUIRED)
 
+# Add Assimp using FetchContent
+include(FetchContent)
+set(ASSIMP_BUILD_ZLIB OFF CACHE BOOL "" FORCE)
+set(ASSIMP_BUILD_TESTS OFF CACHE BOOL "" FORCE)
+set(ASSIMP_INSTALL OFF CACHE BOOL "" FORCE)
+FetchContent_Declare(
+    assimp
+    GIT_REPOSITORY https://github.com/assimp/assimp.git
+    GIT_TAG v5.3.1
+)
+FetchContent_MakeAvailable(assimp)
+
 # Include directories
 include_directories(
     ${CMAKE_SOURCE_DIR}/include
@@ -31,6 +43,7 @@ add_executable(OpenGL ${SOURCES})
 target_link_libraries(OpenGL
     ${CMAKE_SOURCE_DIR}/lib/libglfw3.a
     OpenGL::GL
+    assimp::assimp
 )
 
 # Copy shader files to build directory

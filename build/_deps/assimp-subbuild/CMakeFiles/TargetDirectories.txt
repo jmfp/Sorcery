@@ -1,0 +1,3 @@
+/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-subbuild/CMakeFiles/assimp-populate.dir
+/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-subbuild/CMakeFiles/edit_cache.dir
+/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-subbuild/CMakeFiles/rebuild_cache.dir

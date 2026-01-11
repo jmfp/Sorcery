@@ -2152,3 +2152,1100 @@ events:
         - "/Network/Library/Frameworks"
         - "/System/Library/Frameworks"
 ...
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindGit.cmake:86 (find_program)"
+      - "/opt/homebrew/share/cmake/Modules/FetchContent.cmake:1874 (find_package)"
+      - "/opt/homebrew/share/cmake/Modules/FetchContent.cmake:1609 (__FetchContent_populateSubbuild)"
+      - "/opt/homebrew/share/cmake/Modules/FetchContent.cmake:2145:EVAL:2 (__FetchContent_doPopulation)"
+      - "/opt/homebrew/share/cmake/Modules/FetchContent.cmake:2145 (cmake_language)"
+      - "/opt/homebrew/share/cmake/Modules/FetchContent.cmake:2384 (__FetchContent_Populate)"
+      - "CMakeLists.txt:17 (FetchContent_MakeAvailable)"
+    mode: "program"
+    variable: "GIT_EXECUTABLE"
+    description: "Git command line client"
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "git"
+    candidate_directories:
+      - "/Users/jesseprice/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/jesseprice/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/usr/local/share/dotnet/"
+      - "/Users/jesseprice/.dotnet/tools/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/bin/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/sbin/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/opt/homebrew/"
+      - "/usr/local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/"
+      - "/usr/bin/"
+      - "/usr/sbin/"
+      - "/usr/"
+      - "/bin/"
+      - "/sbin/"
+      - "/usr/X11R6/bin/"
+      - "/usr/X11R6/sbin/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/bin/"
+      - "/usr/pkg/sbin/"
+      - "/usr/pkg/"
+      - "/opt/bin/"
+      - "/opt/sbin/"
+      - "/opt/"
+      - "/sw/bin/"
+      - "/sw/sbin/"
+      - "/sw/"
+      - "/opt/local/bin/"
+      - "/opt/local/sbin/"
+      - "/opt/local/"
+      - "/Users/jesseprice/Applications/"
+      - "/Applications/"
+      - "/Applications/Xcode.app/Contents/Applications/"
+      - "/Applications/Xcode.app/Contents/Developer/Applications/"
+    searched_directories:
+      - "/Users/jesseprice/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/git"
+      - "/Users/jesseprice/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/git"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/git"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/git"
+    found: "/opt/homebrew/bin/git"
+    search_context:
+      ENV{PATH}:
+        - "/Users/jesseprice/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/jesseprice/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/usr/local/share/dotnet"
+        - "~/.dotnet/tools"
+        - "/Users/jesseprice/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/jesseprice/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+        - "/sw"
+        - "/opt/local"
+      CMAKE_SYSTEM_APPBUNDLE_PATH:
+        - "/Users/jesseprice/Applications"
+        - "/Applications"
+        - "/Applications/Xcode.app/Contents/Applications"
+        - "/Applications/Xcode.app/Contents/Developer/Applications"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CheckIncludeFile.cmake:165 (try_compile)"
+      - "build/_deps/assimp-src/contrib/zlib/CMakeLists.txt:35 (check_include_file)"
+    checks:
+      - "Looking for sys/types.h"
+    directories:
+      source: "/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/CMakeFiles/CMakeScratch/TryCompile-HJ3CaH"
+      binary: "/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/CMakeFiles/CMakeScratch/TryCompile-HJ3CaH"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-fno-strict-aliasing "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/cmake-modules"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_SYS_TYPES_H"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/CMakeFiles/CMakeScratch/TryCompile-HJ3CaH'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_bcb85/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_bcb85.dir/build.make CMakeFiles/cmTC_bcb85.dir/build
+        Building C object CMakeFiles/cmTC_bcb85.dir/CheckIncludeFile.c.o
+        /usr/bin/cc   -fno-strict-aliasing   -std=gnu99 -arch arm64 -fPIE -MD -MT CMakeFiles/cmTC_bcb85.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_bcb85.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_bcb85.dir/CheckIncludeFile.c.o -c /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/CMakeFiles/CMakeScratch/TryCompile-HJ3CaH/CheckIncludeFile.c
+        Linking C executable cmTC_bcb85
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bcb85.dir/link.txt --verbose=1
+        /usr/bin/cc -fno-strict-aliasing   -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_bcb85.dir/CheckIncludeFile.c.o -o cmTC_bcb85
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CheckIncludeFile.cmake:165 (try_compile)"
+      - "build/_deps/assimp-src/contrib/zlib/CMakeLists.txt:36 (check_include_file)"
+    checks:
+      - "Looking for stdint.h"
+    directories:
+      source: "/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/CMakeFiles/CMakeScratch/TryCompile-5BnXmK"
+      binary: "/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/CMakeFiles/CMakeScratch/TryCompile-5BnXmK"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-fno-strict-aliasing "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/cmake-modules"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_STDINT_H"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/CMakeFiles/CMakeScratch/TryCompile-5BnXmK'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_c9dcb/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_c9dcb.dir/build.make CMakeFiles/cmTC_c9dcb.dir/build
+        Building C object CMakeFiles/cmTC_c9dcb.dir/CheckIncludeFile.c.o
+        /usr/bin/cc   -fno-strict-aliasing   -std=gnu99 -arch arm64 -fPIE -MD -MT CMakeFiles/cmTC_c9dcb.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_c9dcb.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_c9dcb.dir/CheckIncludeFile.c.o -c /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/CMakeFiles/CMakeScratch/TryCompile-5BnXmK/CheckIncludeFile.c
+        Linking C executable cmTC_c9dcb
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c9dcb.dir/link.txt --verbose=1
+        /usr/bin/cc -fno-strict-aliasing   -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_c9dcb.dir/CheckIncludeFile.c.o -o cmTC_c9dcb
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CheckIncludeFile.cmake:165 (try_compile)"
+      - "build/_deps/assimp-src/contrib/zlib/CMakeLists.txt:37 (check_include_file)"
+    checks:
+      - "Looking for stddef.h"
+    directories:
+      source: "/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/CMakeFiles/CMakeScratch/TryCompile-KUWKiz"
+      binary: "/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/CMakeFiles/CMakeScratch/TryCompile-KUWKiz"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-fno-strict-aliasing "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/cmake-modules"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_STDDEF_H"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/CMakeFiles/CMakeScratch/TryCompile-KUWKiz'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_77f10/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_77f10.dir/build.make CMakeFiles/cmTC_77f10.dir/build
+        Building C object CMakeFiles/cmTC_77f10.dir/CheckIncludeFile.c.o
+        /usr/bin/cc   -fno-strict-aliasing   -std=gnu99 -arch arm64 -fPIE -MD -MT CMakeFiles/cmTC_77f10.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_77f10.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_77f10.dir/CheckIncludeFile.c.o -c /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/CMakeFiles/CMakeScratch/TryCompile-KUWKiz/CheckIncludeFile.c
+        Linking C executable cmTC_77f10
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_77f10.dir/link.txt --verbose=1
+        /usr/bin/cc -fno-strict-aliasing   -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_77f10.dir/CheckIncludeFile.c.o -o cmTC_77f10
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CheckTypeSize.cmake:237 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/CheckTypeSize.cmake:364 (__check_type_size_impl)"
+      - "build/_deps/assimp-src/contrib/zlib/CMakeLists.txt:55 (check_type_size)"
+    checks:
+      - "Check size of off64_t"
+    directories:
+      source: "/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/CMakeFiles/CMakeScratch/TryCompile-WbVHNW"
+      binary: "/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/CMakeFiles/CMakeScratch/TryCompile-WbVHNW"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-fno-strict-aliasing "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/cmake-modules"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_OFF64_T"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/CMakeFiles/CMakeScratch/TryCompile-WbVHNW'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_088a8/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_088a8.dir/build.make CMakeFiles/cmTC_088a8.dir/build
+        Building C object CMakeFiles/cmTC_088a8.dir/OFF64_T.c.o
+        /usr/bin/cc -DHAVE_STDDEF_H -DHAVE_STDINT_H -DHAVE_SYS_TYPES_H -D_LARGEFILE64_SOURCE=1  -fno-strict-aliasing   -std=gnu99 -arch arm64 -fPIE -MD -MT CMakeFiles/cmTC_088a8.dir/OFF64_T.c.o -MF CMakeFiles/cmTC_088a8.dir/OFF64_T.c.o.d -o CMakeFiles/cmTC_088a8.dir/OFF64_T.c.o -c /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/CMakeFiles/CMakeScratch/TryCompile-WbVHNW/OFF64_T.c
+        /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/CMakeFiles/CMakeScratch/TryCompile-WbVHNW/OFF64_T.c:29:12: error: use of undeclared identifier 'off64_t'
+           29 |   ('0' + ((SIZE / 10000)%10)),
+              |            ^
+        /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/CMakeFiles/CMakeScratch/TryCompile-WbVHNW/OFF64_T.c:27:22: note: expanded from macro 'SIZE'
+           27 | #define SIZE (sizeof(off64_t))
+              |                      ^
+        /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/CMakeFiles/CMakeScratch/TryCompile-WbVHNW/OFF64_T.c:30:12: error: use of undeclared identifier 'off64_t'
+           30 |   ('0' + ((SIZE / 1000)%10)),
+              |            ^
+        /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/CMakeFiles/CMakeScratch/TryCompile-WbVHNW/OFF64_T.c:27:22: note: expanded from macro 'SIZE'
+           27 | #define SIZE (sizeof(off64_t))
+              |                      ^
+        /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/CMakeFiles/CMakeScratch/TryCompile-WbVHNW/OFF64_T.c:31:12: error: use of undeclared identifier 'off64_t'
+           31 |   ('0' + ((SIZE / 100)%10)),
+              |            ^
+        /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/CMakeFiles/CMakeScratch/TryCompile-WbVHNW/OFF64_T.c:27:22: note: expanded from macro 'SIZE'
+           27 | #define SIZE (sizeof(off64_t))
+              |                      ^
+        /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/CMakeFiles/CMakeScratch/TryCompile-WbVHNW/OFF64_T.c:32:12: error: use of undeclared identifier 'off64_t'
+           32 |   ('0' + ((SIZE / 10)%10)),
+              |            ^
+        /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/CMakeFiles/CMakeScratch/TryCompile-WbVHNW/OFF64_T.c:27:22: note: expanded from macro 'SIZE'
+           27 | #define SIZE (sizeof(off64_t))
+              |                      ^
+        /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/CMakeFiles/CMakeScratch/TryCompile-WbVHNW/OFF64_T.c:33:12: error: use of undeclared identifier 'off64_t'
+           33 |   ('0' +  (SIZE    % 10)),
+              |            ^
+        /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/CMakeFiles/CMakeScratch/TryCompile-WbVHNW/OFF64_T.c:27:22: note: expanded from macro 'SIZE'
+           27 | #define SIZE (sizeof(off64_t))
+              |                      ^
+        5 errors generated.
+        make[1]: *** [CMakeFiles/cmTC_088a8.dir/OFF64_T.c.o] Error 1
+        make: *** [cmTC_088a8/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CheckFunctionExists.cmake:167 (try_compile)"
+      - "build/_deps/assimp-src/contrib/zlib/CMakeLists.txt:64 (check_function_exists)"
+    checks:
+      - "Looking for fseeko"
+    directories:
+      source: "/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/CMakeFiles/CMakeScratch/TryCompile-K38SCi"
+      binary: "/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/CMakeFiles/CMakeScratch/TryCompile-K38SCi"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-fno-strict-aliasing "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/cmake-modules"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_FSEEKO"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/CMakeFiles/CMakeScratch/TryCompile-K38SCi'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_e3a5b/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_e3a5b.dir/build.make CMakeFiles/cmTC_e3a5b.dir/build
+        Building C object CMakeFiles/cmTC_e3a5b.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -fno-strict-aliasing  -DCHECK_FUNCTION_EXISTS=fseeko -std=gnu99 -arch arm64 -fPIE -MD -MT CMakeFiles/cmTC_e3a5b.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_e3a5b.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_e3a5b.dir/CheckFunctionExists.c.o -c /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/CMakeFiles/CMakeScratch/TryCompile-K38SCi/CheckFunctionExists.c
+        Linking C executable cmTC_e3a5b
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e3a5b.dir/link.txt --verbose=1
+        /usr/bin/cc -fno-strict-aliasing  -DCHECK_FUNCTION_EXISTS=fseeko -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_e3a5b.dir/CheckFunctionExists.c.o -o cmTC_e3a5b
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CheckIncludeFile.cmake:165 (try_compile)"
+      - "build/_deps/assimp-src/contrib/zlib/CMakeLists.txt:72 (check_include_file)"
+    checks:
+      - "Looking for unistd.h"
+    directories:
+      source: "/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/CMakeFiles/CMakeScratch/TryCompile-kTG4t3"
+      binary: "/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/CMakeFiles/CMakeScratch/TryCompile-kTG4t3"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-fno-strict-aliasing "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/cmake-modules"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "Z_HAVE_UNISTD_H"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/CMakeFiles/CMakeScratch/TryCompile-kTG4t3'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_cdcb0/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_cdcb0.dir/build.make CMakeFiles/cmTC_cdcb0.dir/build
+        Building C object CMakeFiles/cmTC_cdcb0.dir/CheckIncludeFile.c.o
+        /usr/bin/cc   -fno-strict-aliasing   -std=gnu99 -arch arm64 -fPIE -MD -MT CMakeFiles/cmTC_cdcb0.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_cdcb0.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_cdcb0.dir/CheckIncludeFile.c.o -c /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/CMakeFiles/CMakeScratch/TryCompile-kTG4t3/CheckIncludeFile.c
+        Linking C executable cmTC_cdcb0
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cdcb0.dir/link.txt --verbose=1
+        /usr/bin/cc -fno-strict-aliasing   -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_cdcb0.dir/CheckIncludeFile.c.o -o cmTC_cdcb0
+        
+      exitCode: 0
+  -
+    kind: "find-v1"
+    backtrace:
+      - "build/_deps/assimp-src/cmake-modules/FindRT.cmake:14 (find_library)"
+      - "build/_deps/assimp-src/code/CMakeLists.txt:1066 (FIND_PACKAGE)"
+    mode: "library"
+    variable: "RT_LIBRARY"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "rt"
+    candidate_directories:
+      - "/Users/jesseprice/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/jesseprice/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/Library/Apple/usr/bin/"
+      - "/usr/local/share/dotnet/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/"
+      - "/opt/homebrew/lib/"
+      - "/opt/homebrew/"
+      - "/usr/local/lib/"
+      - "/usr/local/"
+      - "/usr/lib/"
+      - "/usr/"
+      - "/opt/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/"
+      - "/Library/Developer/CommandLineTools/Library/Frameworks/"
+      - "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/"
+      - "/Library/Frameworks/"
+      - "/System/Library/Frameworks/"
+    searched_directories:
+      - "/Users/jesseprice/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/Users/jesseprice/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/Library/Apple/usr/bin/"
+      - "/usr/local/share/dotnet/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/"
+      - "/opt/homebrew/lib/"
+      - "/opt/homebrew/"
+      - "/usr/local/lib/"
+      - "/usr/local/"
+      - "/usr/lib/"
+      - "/usr/"
+      - "/opt/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/"
+      - "/Library/Developer/CommandLineTools/Library/Frameworks/"
+      - "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/"
+      - "/Library/Frameworks/"
+      - "/System/Library/Frameworks/"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/Users/jesseprice/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/jesseprice/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/usr/local/share/dotnet"
+        - "~/.dotnet/tools"
+        - "/Users/jesseprice/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/Users/jesseprice/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+        - "/sw"
+        - "/opt/local"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+      CMAKE_SYSTEM_FRAMEWORK_PATH:
+        - "~/Library/Frameworks"
+        - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Library/Frameworks"
+        - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Network/Library/Frameworks"
+        - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks"
+        - "/Library/Developer/CommandLineTools/Library/Frameworks"
+        - "/Applications/Xcode.app/Contents/Developer/Library/Frameworks"
+        - "/Library/Frameworks"
+        - "/Network/Library/Frameworks"
+        - "/System/Library/Frameworks"
+...
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindPkgConfig.cmake:69 (find_program)"
+      - "build/_deps/assimp-src/cmake-modules/FindPkgMacros.cmake:64 (find_package)"
+      - "build/_deps/assimp-src/cmake-modules/FindZLIB.cmake:37 (use_pkgconfig)"
+      - "build/_deps/assimp-src/CMakeLists.txt:490 (FIND_PACKAGE)"
+    mode: "program"
+    variable: "PKG_CONFIG_EXECUTABLE"
+    description: "pkg-config executable"
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "pkg-config"
+      - "pkgconf"
+    candidate_directories:
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/usr/local/share/dotnet/"
+      - "/Users/jesseprice/.dotnet/tools/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/bin/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/sbin/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/opt/homebrew/"
+      - "/usr/local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/"
+      - "/usr/bin/"
+      - "/usr/sbin/"
+      - "/usr/"
+      - "/bin/"
+      - "/sbin/"
+      - "/usr/X11R6/bin/"
+      - "/usr/X11R6/sbin/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/bin/"
+      - "/usr/pkg/sbin/"
+      - "/usr/pkg/"
+      - "/opt/bin/"
+      - "/opt/sbin/"
+      - "/opt/"
+      - "/sw/bin/"
+      - "/sw/sbin/"
+      - "/sw/"
+      - "/opt/local/bin/"
+      - "/opt/local/sbin/"
+      - "/opt/local/"
+      - "/Users/jesseprice/Applications/"
+      - "/Applications/"
+      - "/Applications/Xcode.app/Contents/Applications/"
+      - "/Applications/Xcode.app/Contents/Developer/Applications/"
+    searched_directories:
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/pkg-config"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/pkgconf"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/pkg-config"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/pkgconf"
+    found: "/opt/homebrew/bin/pkg-config"
+    search_context:
+      ENV{PATH}:
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/usr/local/share/dotnet"
+        - "~/.dotnet/tools"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+        - "/sw"
+        - "/opt/local"
+      CMAKE_SYSTEM_APPBUNDLE_PATH:
+        - "/Users/jesseprice/Applications"
+        - "/Applications"
+        - "/Applications/Xcode.app/Contents/Applications"
+        - "/Applications/Xcode.app/Contents/Developer/Applications"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "build/_deps/assimp-src/cmake-modules/FindZLIB.cmake:41 (find_path)"
+      - "build/_deps/assimp-src/CMakeLists.txt:490 (FIND_PACKAGE)"
+    mode: "path"
+    variable: "ZLIB_INCLUDE_DIR"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "zlib.h"
+    candidate_directories:
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/usr/local/share/dotnet/"
+      - "/Users/jesseprice/.dotnet/tools/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/"
+      - "/opt/homebrew/include/"
+      - "/opt/homebrew/"
+      - "/usr/local/include/"
+      - "/usr/local/"
+      - "/usr/include/"
+      - "/usr/"
+      - "/include/"
+      - "/usr/X11R6/include/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/include/"
+      - "/usr/pkg/"
+      - "/opt/include/"
+      - "/opt/"
+      - "/sw/include/"
+      - "/sw/"
+      - "/opt/local/include/"
+      - "/opt/local/"
+      - "/usr/include/X11/"
+      - "/Users/jesseprice/Library/Frameworks/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Library/Frameworks/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Network/Library/Frameworks/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/"
+      - "/Library/Developer/CommandLineTools/Library/Frameworks/"
+      - "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/"
+      - "/Library/Frameworks/"
+      - "/Network/Library/Frameworks/"
+      - "/System/Library/Frameworks/"
+    searched_directories:
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/zlib.h"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/zlib.h"
+      - "/opt/homebrew/bin/zlib.h"
+      - "/opt/homebrew/sbin/zlib.h"
+      - "/usr/local/bin/zlib.h"
+      - "/System/Cryptexes/App/usr/bin/zlib.h"
+      - "/usr/bin/zlib.h"
+      - "/bin/zlib.h"
+      - "/usr/sbin/zlib.h"
+      - "/sbin/zlib.h"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/zlib.h"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/zlib.h"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/zlib.h"
+      - "/Library/Apple/usr/bin/zlib.h"
+      - "/usr/local/share/dotnet/zlib.h"
+      - "/Users/jesseprice/.dotnet/tools/zlib.h"
+    found: "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/"
+    search_context:
+      ENV{PATH}:
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/usr/local/share/dotnet"
+        - "~/.dotnet/tools"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+        - "/sw"
+        - "/opt/local"
+      CMAKE_SYSTEM_INCLUDE_PATH:
+        - "/usr/include/X11"
+      CMAKE_SYSTEM_FRAMEWORK_PATH:
+        - "~/Library/Frameworks"
+        - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Library/Frameworks"
+        - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Network/Library/Frameworks"
+        - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks"
+        - "/Library/Developer/CommandLineTools/Library/Frameworks"
+        - "/Applications/Xcode.app/Contents/Developer/Library/Frameworks"
+        - "/Library/Frameworks"
+        - "/Network/Library/Frameworks"
+        - "/System/Library/Frameworks"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "build/_deps/assimp-src/cmake-modules/FindZLIB.cmake:42 (find_library)"
+      - "build/_deps/assimp-src/CMakeLists.txt:490 (FIND_PACKAGE)"
+    mode: "library"
+    variable: "ZLIB_LIBRARY_REL"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "z"
+      - "zlib"
+      - "zdll"
+    candidate_directories:
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/Library/Apple/usr/bin/"
+      - "/usr/local/share/dotnet/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/"
+      - "/opt/homebrew/lib/"
+      - "/opt/homebrew/"
+      - "/usr/local/lib/"
+      - "/usr/local/"
+      - "/usr/lib/"
+      - "/usr/"
+      - "/opt/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/"
+      - "/Library/Developer/CommandLineTools/Library/Frameworks/"
+      - "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/"
+      - "/Library/Frameworks/"
+      - "/System/Library/Frameworks/"
+    searched_directories:
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/Library/Apple/usr/bin/"
+      - "/usr/local/share/dotnet/"
+    found: "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libz.tbd"
+    search_context:
+      ENV{PATH}:
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/usr/local/share/dotnet"
+        - "~/.dotnet/tools"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+        - "/sw"
+        - "/opt/local"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+      CMAKE_SYSTEM_FRAMEWORK_PATH:
+        - "~/Library/Frameworks"
+        - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Library/Frameworks"
+        - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Network/Library/Frameworks"
+        - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks"
+        - "/Library/Developer/CommandLineTools/Library/Frameworks"
+        - "/Applications/Xcode.app/Contents/Developer/Library/Frameworks"
+        - "/Library/Frameworks"
+        - "/Network/Library/Frameworks"
+        - "/System/Library/Frameworks"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "build/_deps/assimp-src/cmake-modules/FindZLIB.cmake:43 (find_library)"
+      - "build/_deps/assimp-src/CMakeLists.txt:490 (FIND_PACKAGE)"
+    mode: "library"
+    variable: "ZLIB_LIBRARY_DBG"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "zd"
+      - "zD"
+      - "z_d"
+      - "z_D"
+      - "z_debug"
+      - "z"
+      - "zlibd"
+      - "zlibD"
+      - "zlib_d"
+      - "zlib_D"
+      - "zlib_debug"
+      - "zlib"
+      - "zdlld"
+      - "zdllD"
+      - "zdll_d"
+      - "zdll_D"
+      - "zdll_debug"
+      - "zdll"
+    candidate_directories:
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/Library/Apple/usr/bin/"
+      - "/usr/local/share/dotnet/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/"
+      - "/opt/homebrew/lib/"
+      - "/opt/homebrew/"
+      - "/usr/local/lib/"
+      - "/usr/local/"
+      - "/usr/lib/"
+      - "/usr/"
+      - "/opt/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/"
+      - "/Library/Developer/CommandLineTools/Library/Frameworks/"
+      - "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/"
+      - "/Library/Frameworks/"
+      - "/System/Library/Frameworks/"
+    searched_directories:
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/Library/Apple/usr/bin/"
+      - "/usr/local/share/dotnet/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/"
+      - "/opt/homebrew/lib/"
+      - "/opt/homebrew/"
+      - "/usr/local/lib/"
+      - "/usr/local/"
+      - "/usr/lib/"
+      - "/usr/"
+      - "/opt/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/"
+      - "/Library/Developer/CommandLineTools/Library/Frameworks/"
+      - "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/"
+      - "/Library/Frameworks/"
+      - "/System/Library/Frameworks/"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/Library/Apple/usr/bin/"
+      - "/usr/local/share/dotnet/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/"
+      - "/opt/homebrew/lib/"
+      - "/opt/homebrew/"
+      - "/usr/local/lib/"
+      - "/usr/local/"
+      - "/usr/lib/"
+      - "/usr/"
+      - "/opt/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/"
+      - "/Library/Developer/CommandLineTools/Library/Frameworks/"
+      - "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/"
+      - "/Library/Frameworks/"
+      - "/System/Library/Frameworks/"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/Library/Apple/usr/bin/"
+      - "/usr/local/share/dotnet/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/"
+      - "/opt/homebrew/lib/"
+      - "/opt/homebrew/"
+      - "/usr/local/lib/"
+      - "/usr/local/"
+      - "/usr/lib/"
+      - "/usr/"
+      - "/opt/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/"
+      - "/Library/Developer/CommandLineTools/Library/Frameworks/"
+      - "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/"
+      - "/Library/Frameworks/"
+      - "/System/Library/Frameworks/"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/Library/Apple/usr/bin/"
+      - "/usr/local/share/dotnet/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/"
+      - "/opt/homebrew/lib/"
+      - "/opt/homebrew/"
+      - "/usr/local/lib/"
+      - "/usr/local/"
+      - "/usr/lib/"
+      - "/usr/"
+      - "/opt/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/"
+      - "/Library/Developer/CommandLineTools/Library/Frameworks/"
+      - "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/"
+      - "/Library/Frameworks/"
+      - "/System/Library/Frameworks/"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/Library/Apple/usr/bin/"
+      - "/usr/local/share/dotnet/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/"
+      - "/opt/homebrew/lib/"
+      - "/opt/homebrew/"
+      - "/usr/local/lib/"
+      - "/usr/local/"
+      - "/usr/lib/"
+      - "/usr/"
+      - "/opt/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/"
+      - "/Library/Developer/CommandLineTools/Library/Frameworks/"
+      - "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/"
+      - "/Library/Frameworks/"
+      - "/System/Library/Frameworks/"
+      - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
+      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/Library/Apple/usr/bin/"
+      - "/usr/local/share/dotnet/"
+    found: "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libz.tbd"
+    search_context:
+      ENV{PATH}:
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/Library/Apple/usr/bin"
+        - "/usr/local/share/dotnet"
+        - "~/.dotnet/tools"
+        - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
+        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+        - "/sw"
+        - "/opt/local"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+      CMAKE_SYSTEM_FRAMEWORK_PATH:
+        - "~/Library/Frameworks"
+        - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Library/Frameworks"
+        - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Network/Library/Frameworks"
+        - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks"
+        - "/Library/Developer/CommandLineTools/Library/Frameworks"
+        - "/Applications/Xcode.app/Contents/Developer/Library/Frameworks"
+        - "/Library/Frameworks"
+        - "/Network/Library/Frameworks"
+        - "/System/Library/Frameworks"
+...
