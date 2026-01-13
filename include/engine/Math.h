@@ -42,7 +42,7 @@ class Vector3
     public:
         float x, y, z;
 
-        Vector3(float x, float y, float z) : x(x), y(y), z(z) {}
+        Vector3(float x, float y, float z){ this->x = x; this->y = y; this->z = z; }
 
         Vector3 operator+(const Vector3& other) const
         {
@@ -52,5 +52,23 @@ class Vector3
         Vector3 operator-(const Vector3& other) const
         {
             return Vector3(x - other.x, y - other.y, z - other.z);
+        }
+};
+
+class Vector2
+{
+    public:
+        float x, y;
+
+        Vector2(float x, float y){ this->x = x; this->y = y; }
+
+        Vector2 operator+(const Vector2& other) const
+        {
+            return Vector2(x + other.x, y + other.y);
+        }
+
+        Vector2 operator-(const Vector2& other) const
+        {
+            return Vector2(x - other.x, y - other.y);
         }
 };

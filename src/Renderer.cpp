@@ -5,12 +5,14 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 #include <engine/Camera.h>
+#include <engine/Model.h>
 #include <engine/Mesh.h>
 Renderer::Renderer(Window* window){
     this->window = window;
 }
 
 void Renderer3D::Render(Shader* shader){
+    Model testModel = Model((char *)"../src/models/backpack/backpack.obj");
     Camera camera(glm::vec3(0.0f, 0.0f, 3.0f));
     glfwSetWindowUserPointer(window->GetWindow(), &camera);
     int framebufferWidth, framebufferHeight;
@@ -27,9 +29,9 @@ void Renderer3D::Render(Shader* shader){
         0.1f, //near plane
         100.0f // far plane
     );
-    Texture testTexture = Texture("../src/textures/wall.jpg", 16, 16);
-    Mesh mesh = Mesh();
-    mesh.vertices = {};
+    // Texture testTexture = Texture("../src/textures/wall.jpg", 16, 16);
+    // Mesh mesh = Mesh();
+    // mesh.vertices = {};
     float vertices[] = {
         -0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
          0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f, 
@@ -131,7 +133,9 @@ void Renderer3D::Render(Shader* shader){
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         // shader->Draw();
-        glBindTexture(GL_TEXTURE_2D, testTexture.GetTexture());
+        // glBindTexture(GL_TEXTURE_2D, testTexture.GetTexture());
+
+        testModel.Draw(*shader);
         
         /////////////////////////////////////
         //////This is test stuff/////////////
