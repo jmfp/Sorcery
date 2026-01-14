@@ -143,13 +143,19 @@ void Renderer3D::Render(Shader* shader){
         /////////////////////////////////////
         //////This is test stuff/////////////
         /////////////////////////////////////
+
+        lightPos.x = 1.0f + sin(glfwGetTime()) * 2.0f;
+        lightPos.y = sin(glfwGetTime() / 2.0f) * 1.0f;
         shader->Use();
-        shader->SetVec3("objectColor", 1.0f, 0.5f, 0.31f);
-        shader->SetVec3("lightColor", 1.0f, 1.0f, 1.0f);
-        shader->SetFloat("ambientStrength", 0.1f);
-        shader->SetVec3("lightPos", lightPos.x, lightPos.y, lightPos.z);
         shader->SetVec3("viewPos", camera.GetPosition().x, camera.GetPosition().y, camera.GetPosition().z);
-        
+        shader->SetVec3("material.ambient", 1.0f, 0.5f, 0.31f);
+        shader->SetVec3("material.diffuse", 1.0f, 0.5f, 0.31f);
+        shader->SetVec3("material.specular", 0.5f, 0.5f, 0.5f);
+        shader->SetFloat("material.shininess", 32.0f);
+        shader->SetVec3("light.position", lightPos.x, lightPos.y, lightPos.z);
+        shader->SetVec3("light.ambient",  0.2f, 0.2f, 0.2f);
+        shader->SetVec3("light.diffuse",  0.5f, 0.5f, 0.5f); // darken diffuse light a bit
+        shader->SetVec3("light.specular", 1.0f, 1.0f, 1.0f);
         unsigned int modelLoc = glGetUniformLocation(shader->ID, "model");
         glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
         
