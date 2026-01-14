@@ -2,14 +2,18 @@
 #include <glad/glad.h>
 #include <vector>
 #include <engine/Shader.h>
+#include <glm/glm.hpp>
+#include <glm/gtc/type_ptr.hpp>
 
 
-Mesh::Mesh(std::vector<Vertex> vertices, std::vector<unsigned int> indices, std::vector<MeshTexture> textures) {
-    this->vertices = vertices;
-    this->indices = indices;
-    this->textures = textures;
+Mesh::Mesh(std::vector<Vertex> vertices, std::vector<unsigned int> indices, std::vector<MeshTexture> textures)
+    : vertices(vertices), 
+      indices(indices), 
+      textures(textures),
+      shader("shaders/mesh.vs", "shaders/mesh.fs")
+{
     SetupMesh();
-};
+}
 
 void Mesh::SetupMesh(){
     glGenVertexArrays(1, &VAO);
@@ -31,9 +35,21 @@ void Mesh::SetupMesh(){
     glBindVertexArray(0);
 }
 
-void Mesh::Draw(Shader &shader){
+void Mesh::Draw(Shader &shader, glm::mat4 model, glm::mat4 view, glm::mat4 projection){
+    shader.Use();
+    
+    unsigned int modelLoc = glGetUniformLocation(shader.ID, "model");
+    glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+    
+    unsigned int viewLoc = glGetUniformLocation(shader.ID, "view");
+    glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
+    
+    unsigned int projLoc = glGetUniformLocation(shader.ID, "projection");
+    glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
+    
     unsigned int diffuseNr = 1;
     unsigned int specularNr = 1;
+    
     for(unsigned int i = 0; i < textures.size(); i++)
     {
         glActiveTexture(GL_TEXTURE0 + i);

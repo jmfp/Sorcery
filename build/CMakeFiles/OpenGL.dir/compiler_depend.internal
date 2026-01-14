@@ -3252,6 +3252,121 @@ CMakeFiles/OpenGL.dir/src/Mesh.cpp.o
  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/fwd.hpp
  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/geometric.hpp
  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/glm.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/common.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/detail/qualifier.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/detail/setup.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/detail/type_mat3x3.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/detail/type_mat4x4.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/detail/type_vec3.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/detail/type_vec4.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/exponential.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/common.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/detail/type_mat3x3.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/detail/type_mat4x4.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/detail/type_vec3.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/detail/type_vec4.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/exponential.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/vector_relational.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/quaternion_common.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/quaternion_geometric.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/quaternion_relational.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/quaternion_relational.inl
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/vector_relational.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/constants.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/matrix_transform.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/trigonometric.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/detail/qualifier.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/detail/setup.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/detail/type_float.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/detail/type_quat.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/detail/type_quat.inl
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/detail/type_vec1.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/exponential.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/exponential.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/vector_relational.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/geometric.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/quaternion_geometric.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/quaternion_geometric.inl
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/scalar_constants.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/scalar_int_sized.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/scalar_uint_sized.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/vector_int1.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/vector_uint1.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/geometric.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/trigonometric.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/vector_relational.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/quaternion_common.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/quaternion_common.inl
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/quaternion_double.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/quaternion_double_precision.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/quaternion_float.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/quaternion_float_precision.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/quaternion_geometric.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/quaternion_relational.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/quaternion_transform.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/quaternion_transform.inl
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/quaternion_trigonometric.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/quaternion_trigonometric.inl
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/scalar_constants.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/vector_bool1.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/vector_bool1_precision.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/vector_double1.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/vector_double1_precision.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/vector_float1.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/vector_float1_precision.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/vector_int1.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/vector_int1_sized.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/vector_relational.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/vector_relational.inl
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/vector_uint1.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/vector_uint1_sized.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/geometric.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/detail/setup.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/scalar_constants.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/geometric.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/constants.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/matrix.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/trigonometric.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/matrix_clip_space.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/matrix_clip_space.inl
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/matrix_projection.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/matrix_projection.inl
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/matrix_transform.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/matrix_transform.inl
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/scalar_constants.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/scalar_constants.inl
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/geometric.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/mat4x4.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/matrix.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/trigonometric.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/vec2.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/vec3.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/vec4.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/constants.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/constants.inl
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/matrix_transform.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/matrix_transform.inl
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/trigonometric.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/vector_relational.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/epsilon.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/epsilon.inl
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/quaternion.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/quaternion.inl
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/vec1.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/mat2x2.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/mat2x3.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/mat2x4.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/mat3x2.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/mat3x3.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/mat3x4.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/mat4x2.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/mat4x3.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/mat4x4.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/vec2.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/vec3.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/vec4.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/type_ptr.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/type_ptr.inl
  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/integer.hpp
  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/mat2x2.hpp
  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/mat2x3.hpp
@@ -4220,6 +4335,7 @@ CMakeFiles/OpenGL.dir/src/Model.cpp.o
  /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/include/assimp/vector3.inl
  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/GLFW/glfw3.h
  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/KHR/khrplatform.h
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Camera.h
  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Math.h
  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Mesh.h
  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Model.h
@@ -4397,6 +4513,30 @@ CMakeFiles/OpenGL.dir/src/Model.cpp.o
  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/fwd.hpp
  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/geometric.hpp
  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/glm.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/scalar_constants.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/geometric.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/detail/setup.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/scalar_constants.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/scalar_constants.inl
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/constants.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/constants.inl
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/matrix.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/trigonometric.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/matrix_clip_space.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/matrix_clip_space.inl
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/matrix_projection.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/matrix_projection.inl
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/matrix_transform.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/ext/matrix_transform.inl
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/geometric.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/mat4x4.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/matrix.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/trigonometric.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/vec2.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/vec3.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/vec4.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/matrix_transform.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/matrix_transform.inl
  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/integer.hpp
  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/mat2x2.hpp
  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/mat2x3.hpp

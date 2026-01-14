@@ -12,6 +12,7 @@ Renderer::Renderer(Window* window){
 }
 
 void Renderer3D::Render(Shader* shader){
+    stbi_set_flip_vertically_on_load(true);
     Model testModel = Model((char *)"../src/models/backpack/backpack.obj");
     Camera camera(glm::vec3(0.0f, 0.0f, 3.0f));
     glfwSetWindowUserPointer(window->GetWindow(), &camera);
@@ -23,15 +24,16 @@ void Renderer3D::Render(Shader* shader){
     ///////////////////////////////////////
     glEnable(GL_DEPTH_TEST);
     Shader light("shaders/light.vs", "shaders/light.fs");
+    Shader backpackShader("shaders/mesh.vs", "shaders/mesh.fs");
+    testModel.SetShader(backpackShader);
+    testModel.SetCamera(&camera);
     glm::mat4 projection = glm::perspective(
         glm::radians(45.0f), // field of view
         800.0f / 800.0f, // aspect ratio
         0.1f, //near plane
         100.0f // far plane
     );
-    // Texture testTexture = Texture("../src/textures/wall.jpg", 16, 16);
-    // Mesh mesh = Mesh();
-    // mesh.vertices = {};
+    
     float vertices[] = {
         -0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
          0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f, 
@@ -134,8 +136,9 @@ void Renderer3D::Render(Shader* shader){
 
         // shader->Draw();
         // glBindTexture(GL_TEXTURE_2D, testTexture.GetTexture());
-
-        testModel.Draw(*shader);
+        glm::mat4 model = glm::mat4(1.0f);
+        // testModel.SetMatrices(model, view, projection);
+        testModel.Draw(backpackShader);
         
         /////////////////////////////////////
         //////This is test stuff/////////////
@@ -146,8 +149,7 @@ void Renderer3D::Render(Shader* shader){
         shader->SetFloat("ambientStrength", 0.1f);
         shader->SetVec3("lightPos", lightPos.x, lightPos.y, lightPos.z);
         shader->SetVec3("viewPos", camera.GetPosition().x, camera.GetPosition().y, camera.GetPosition().z);
-
-        glm::mat4 model = glm::mat4(1.0f);
+        
         unsigned int modelLoc = glGetUniformLocation(shader->ID, "model");
         glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
         
@@ -156,7 +158,6 @@ void Renderer3D::Render(Shader* shader){
         
         unsigned int projLoc = glGetUniformLocation(shader->ID, "projection");
         glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
-        
         glBindVertexArray(containerVAO);
         glDrawArrays(GL_TRIANGLES, 0, 36);
         
@@ -166,14 +167,14 @@ void Renderer3D::Render(Shader* shader){
         model = glm::translate(model, lightPos);
         model = glm::scale(model, glm::vec3(0.2f));
         
-        modelLoc = glGetUniformLocation(light.ID, "model");
-        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+        unsigned int lightModelLoc = glGetUniformLocation(light.ID, "model");
+        glUniformMatrix4fv(lightModelLoc, 1, GL_FALSE, glm::value_ptr(model));
         
-        viewLoc = glGetUniformLocation(light.ID, "view");
-        glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
+        unsigned int lightViewLoc = glGetUniformLocation(light.ID, "view");
+        glUniformMatrix4fv(lightViewLoc, 1, GL_FALSE, glm::value_ptr(view));
         
-        projLoc = glGetUniformLocation(light.ID, "projection");
-        glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
+        unsigned int lightProjLoc = glGetUniformLocation(light.ID, "projection");
+        glUniformMatrix4fv(lightProjLoc, 1, GL_FALSE, glm::value_ptr(projection));
         
         glBindVertexArray(lightCubeVAO);
         glDrawArrays(GL_TRIANGLES, 0, 36);

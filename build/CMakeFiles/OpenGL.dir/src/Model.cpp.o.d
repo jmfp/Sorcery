@@ -934,6 +934,7 @@ CMakeFiles/OpenGL.dir/src/Model.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/print \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__system_error/throw_system_error.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/unistd.h \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Camera.h \
   /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include/assimp/scene.h \
   /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include/assimp/types.h \
   /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include/assimp/defs.h \
@@ -1142,4 +1143,28 @@ CMakeFiles/OpenGL.dir/src/Model.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__exception/nested_exception.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__exception/terminate.h \
   /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include/assimp/postprocess.h \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/matrix_transform.hpp \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/../mat4x4.hpp \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/../vec2.hpp \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/../vec3.hpp \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/../vec4.hpp \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/../ext/matrix_projection.hpp \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/../ext/../gtc/constants.hpp \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/../ext/../gtc/../ext/scalar_constants.hpp \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/../ext/../gtc/../ext/../detail/setup.hpp \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/../ext/../gtc/../ext/scalar_constants.inl \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/../ext/../gtc/constants.inl \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/../ext/../geometric.hpp \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/../ext/../trigonometric.hpp \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/../ext/../matrix.hpp \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/../ext/matrix_projection.inl \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/../ext/matrix_clip_space.hpp \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/../ext/../ext/scalar_constants.hpp \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/../ext/matrix_clip_space.inl \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/../ext/matrix_transform.hpp \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/../ext/matrix_transform.inl \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/matrix_transform.inl \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/../geometric.hpp \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/../trigonometric.hpp \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/../matrix.hpp \
   /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/stb_image.h

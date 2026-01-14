@@ -1,17 +1,36 @@
 #include <engine/Model.h>
 #include <glm/glm.hpp>
 #include <engine/Math.h>
+#include <glm/gtc/matrix_transform.hpp> 
 #include <iostream>
 #include <stb_image.h>
 
+void Model::SetMatrices(glm::mat4 model, glm::mat4 view, glm::mat4 projection) {
+    modelMatrix = model;
+    viewMatrix = view;
+    projectionMatrix = projection;
+}
+
 void Model::Draw(Shader &shader){
+    if(mainCamera == nullptr) {
+        return;
+    }
+    projectionMatrix = glm::perspective(
+        glm::radians(mainCamera->GetZoom()),
+        (float)1920 / (float)1080,
+        0.1f,
+        100.0f
+    );
+    viewMatrix = mainCamera->GetViewMatrix();
+    modelMatrix = glm::mat4(1.0f);
     for(unsigned int i = 0; i < meshes.size(); i++)
-        meshes[i].Draw(shader);
+        meshes[i].Draw(shader, modelMatrix, viewMatrix, projectionMatrix);
 }
 
 void Model::loadModel(string path){
     Assimp::Importer importer;
-    const aiScene *scene = importer.ReadFile(path, aiProcess_Triangulate | aiProcess_FlipUVs);
+    
+    const aiScene *scene = importer.ReadFile(path, aiProcess_Triangulate | aiProcess_GenSmoothNormals | aiProcess_FlipUVs | aiProcess_CalcTangentSpace);
     if(!scene || scene->mFlags & AI_SCENE_FLAGS_INCOMPLETE || !scene->mRootNode) 
     {
         cout << "ERROR::ASSIMP::" << importer.GetErrorString() << endl;
@@ -72,7 +91,7 @@ Mesh Model::processMesh(aiMesh *mesh, const aiScene *scene)
     for(unsigned int i = 0; i < mesh->mNumVertices; i++)
     {
         Vertex vertex;
-        Vector3 vector(0,0,0); // we declare a placeholder vector since assimp uses its own vector class that doesn't directly convert to glm's vec3 class so we transfer the data to this placeholder glm::vec3 first.
+        glm::vec3 vector; // we declare a placeholder vector since assimp uses its own vector class that doesn't directly convert to glm's vec3 class so we transfer the data to this placeholder glm::vec3 first.
         // positions
         vector.x = mesh->mVertices[i].x;
         vector.y = mesh->mVertices[i].y;
@@ -89,7 +108,7 @@ Mesh Model::processMesh(aiMesh *mesh, const aiScene *scene)
         // texture coordinates
         if(mesh->mTextureCoords[0]) // does the mesh contain texture coordinates?
         {
-            Vector2 vec(0, 0);
+            glm::vec2 vec;
             // a vertex can contain up to 8 different texture coordinates. We thus make the assumption that we won't 
             // use models where a vertex can have multiple texture coordinates so we always take the first set (0).
             vec.x = mesh->mTextureCoords[0][i].x; 
@@ -107,7 +126,7 @@ Mesh Model::processMesh(aiMesh *mesh, const aiScene *scene)
             // vertex.Bitangent = vector;
         }
         else
-            vertex.texCoords = Vector2(0.0f, 0.0f);
+            vertex.texCoords = glm::vec2(0.0f, 0.0f);
         vertices.push_back(vertex);
     }
     // now wak through each of the mesh's faces (a face is a mesh its triangle) and retrieve the corresponding vertex indices.
