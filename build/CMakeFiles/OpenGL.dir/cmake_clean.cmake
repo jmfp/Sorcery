@@ -13,6 +13,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/OpenGL.dir/src/Mesh.cpp.o.d"
   "CMakeFiles/OpenGL.dir/src/Model.cpp.o"
   "CMakeFiles/OpenGL.dir/src/Model.cpp.o.d"
+  "CMakeFiles/OpenGL.dir/src/Procedural.cpp.o"
+  "CMakeFiles/OpenGL.dir/src/Procedural.cpp.o.d"
   "CMakeFiles/OpenGL.dir/src/Renderer.cpp.o"
   "CMakeFiles/OpenGL.dir/src/Renderer.cpp.o.d"
   "CMakeFiles/OpenGL.dir/src/Shader.cpp.o"

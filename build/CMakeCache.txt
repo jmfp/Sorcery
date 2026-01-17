@@ -405,14 +405,27 @@ FETCHCONTENT_QUIET:BOOL=ON
 // for assimp
 FETCHCONTENT_SOURCE_DIR_ASSIMP:PATH=
 
+//When not empty, overrides where to find pre-populated content
+// for JoltPhysics
+FETCHCONTENT_SOURCE_DIR_JOLTPHYSICS:PATH=
+
 //Enables UPDATE_DISCONNECTED behavior for all content population
 FETCHCONTENT_UPDATES_DISCONNECTED:BOOL=OFF
 
 //Enables UPDATE_DISCONNECTED behavior just for population of assimp
 FETCHCONTENT_UPDATES_DISCONNECTED_ASSIMP:BOOL=OFF
 
+//Enables UPDATE_DISCONNECTED behavior just for population of JoltPhysics
+FETCHCONTENT_UPDATES_DISCONNECTED_JOLTPHYSICS:BOOL=OFF
+
 //Git command line client
 GIT_EXECUTABLE:FILEPATH=/opt/homebrew/bin/git
+
+JPH_BUILD_EXAMPLES:BOOL=OFF
+
+JPH_BUILD_SAMPLES:BOOL=OFF
+
+JPH_BUILD_TESTS:BOOL=OFF
 
 //Include for the OpenGL GLU library
 OPENGL_GLU_INCLUDE_DIR:PATH=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework

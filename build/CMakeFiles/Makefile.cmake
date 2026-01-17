@@ -21,6 +21,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "_deps/assimp-src/code/CMakeLists.txt"
   "_deps/assimp-src/include/assimp/config.h.in"
   "_deps/assimp-src/revision.h.in"
+  "_deps/joltphysics-src/Jolt/Jolt.cmake"
   "/opt/homebrew/share/cmake/Modules/BasicConfigVersion-SameMajorVersion.cmake.in"
   "/opt/homebrew/share/cmake/Modules/CMakeCInformation.cmake"
   "/opt/homebrew/share/cmake/Modules/CMakeCXXInformation.cmake"
@@ -74,6 +75,7 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "_deps/assimp-subbuild/CMakeLists.txt"
+  "_deps/joltphysics-subbuild/CMakeLists.txt"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "_deps/assimp-build/generated/assimpConfigVersion.cmake"
   "_deps/assimp-build/generated/assimpConfig.cmake"
@@ -86,6 +88,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/Jolt.dir/DependInfo.cmake"
   "CMakeFiles/OpenGL.dir/DependInfo.cmake"
   "_deps/assimp-build/code/CMakeFiles/assimp.dir/DependInfo.cmake"
   )
