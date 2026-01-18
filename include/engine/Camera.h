@@ -10,6 +10,7 @@ class Camera{
         glm::vec3 GetPosition(){return position;}
         float GetYaw(){return yaw;}
         float GetZoom(){return zoom;}
+        glm::vec3 GetFront(){return front;}
         void SetPosition(glm::vec3 newPosition){position = newPosition;}
         void SetFront(glm::vec3 newFront){front = newFront;}
         void SetUpDirection(glm::vec3 newUp){up = newUp;}

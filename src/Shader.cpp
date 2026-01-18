@@ -4,6 +4,8 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include <glm/glm.hpp>
+#include <glm/gtc/type_ptr.hpp>
 
 std::string ReadShaderFile(const std::string& filePath){
     std::ifstream file(filePath);
@@ -69,6 +71,14 @@ void Shader::SetFloat(const std::string &name, float value)
 void Shader::SetVec3(const std::string &name, float x, float y, float z)
 {
     glUniform3f(glGetUniformLocation(ID, name.c_str()), x, y, z);
+}
+void Shader::SetVec3(const std::string &name, const glm::vec3 &value)
+{
+    glUniform3fv(glGetUniformLocation(ID, name.c_str()), 1, glm::value_ptr(value));
+}
+void Shader::SetMat4(const std::string &name, const glm::mat4 &mat)
+{
+    glUniformMatrix4fv(glGetUniformLocation(ID, name.c_str()), 1, GL_FALSE, glm::value_ptr(mat));
 }
 // void setVec2(const std::string &name, const glm::vec2 &value)
 // { 

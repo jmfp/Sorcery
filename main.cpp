@@ -10,7 +10,7 @@ int main()
     // Initialize GLFW
     Window* window = new Window();
     window->Initialize("Game Name", 1920, 1080);
-    Shader testShader = Shader("shaders/container.vs", "shaders/container.fs");
+    Shader testShader = Shader("shaders/point_light.vs", "shaders/lighting.fs");
     Renderer3D renderer = Renderer3D(window);
 
     renderer.Render(&testShader);

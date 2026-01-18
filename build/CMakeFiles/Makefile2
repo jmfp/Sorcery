@@ -158,8 +158,8 @@ CMakeFiles/Jolt.dir/clean:
 # Target rules for target CMakeFiles/OpenGL.dir
 
 # All Build rule for target.
-CMakeFiles/OpenGL.dir/all: CMakeFiles/Jolt.dir/all
 CMakeFiles/OpenGL.dir/all: _deps/assimp-build/code/CMakeFiles/assimp.dir/all
+CMakeFiles/OpenGL.dir/all: CMakeFiles/Jolt.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/CMakeFiles --progress-num=35,36,37,38 "Built target OpenGL"
