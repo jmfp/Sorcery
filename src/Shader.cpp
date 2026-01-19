@@ -21,7 +21,7 @@ std::string ReadShaderFile(const std::string& filePath){
     return buffer.str();
 }
 
-Shader::Shader(std::string vertexShader, std::string fragmentShader){
+Shader::Shader(std::string vertexShader, std::string fragmentShader, const char* geometryShader){
     // Shader
     std::string vertexShaderSource = ReadShaderFile(vertexShader);
     const char * sourceCStr = vertexShaderSource.c_str();
@@ -37,14 +37,31 @@ Shader::Shader(std::string vertexShader, std::string fragmentShader){
     GLuint fragmentShaderProgram = glCreateShader(GL_FRAGMENT_SHADER);
     glShaderSource(fragmentShaderProgram, 1, &sourceCStrFrag, NULL);
     glCompileShader(fragmentShaderProgram);
+    
     // Shader program
     ID = glCreateProgram();
     glAttachShader(ID, vertexShaderProgram);
     glAttachShader(ID, fragmentShaderProgram);
+    
+    // Add geometry shader if provided
+    GLuint geometryShaderProgram = 0;
+    if(geometryShader != nullptr){
+        std::string geometryShaderSource = ReadShaderFile(geometryShader);
+        const char * sourceCStrGeom = geometryShaderSource.c_str();
+        geometryShaderProgram = glCreateShader(GL_GEOMETRY_SHADER);
+        glShaderSource(geometryShaderProgram, 1, &sourceCStrGeom, NULL);
+        glCompileShader(geometryShaderProgram);
+        glAttachShader(ID, geometryShaderProgram);
+    }
+    
     glLinkProgram(ID);
 
-    glDeleteShader(fragmentShaderProgram);
+    // Clean up shaders (they're now attached to the program)
     glDeleteShader(vertexShaderProgram);
+    glDeleteShader(fragmentShaderProgram);
+    if(geometryShaderProgram != 0){
+        glDeleteShader(geometryShaderProgram);
+    }
 };
 
 void Shader::Use(){

@@ -16,6 +16,7 @@ class GameObject{
         };
         template<typename T>
         void AddComponent(Component* componentToAdd){components.push_back(componentToAdd);}
+        unsigned int id;
     private:
         std::vector<Component*> components;
 };

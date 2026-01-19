@@ -7,7 +7,7 @@
 
 class Shader{
     public:
-        Shader(std::string vertexShader, std::string fragmentShader);
+        Shader(std::string vertexShader, std::string fragmentShader, const char* geometryShader = nullptr);
         ~Shader();
         void Use();
         void Draw();

@@ -14,6 +14,7 @@ Renderer::Renderer(Window* window){
 void Renderer3D::Render(Shader* shader){
     stbi_set_flip_vertically_on_load(true);
     Model testModel = Model((char *)"../src/models/backpack/backpack.obj");
+    Model testFloor = Model((char *)"../src/models/floor/pixel_floor.obj");
     Camera camera(glm::vec3(0.0f, 0.0f, 3.0f));
     Texture diffuseMapTexture = Texture((char *)"../src/textures/container2.png", 256, 256);
     Texture specularMapTexture = Texture((char *)"../src/textures/specular.png", 256, 256);
@@ -30,6 +31,8 @@ void Renderer3D::Render(Shader* shader){
     Shader backpackShader("shaders/mesh.vs", "shaders/mesh.fs");
     testModel.SetShader(backpackShader);
     testModel.SetCamera(&camera);
+    testFloor.SetShader(backpackShader);
+    testFloor.SetCamera(&camera);
     glm::mat4 projection = glm::perspective(
         glm::radians(45.0f), // field of view
         800.0f / 800.0f, // aspect ratio
@@ -85,10 +88,27 @@ void Renderer3D::Render(Shader* shader){
         0, 1, 3,   // first triangle
         1, 2, 3    // second triangle
     };
-    unsigned int VBO, containerVAO;
+    float points[] = {
+	    -0.5f,  0.5f, // top-left
+	     0.5f,  0.5f, // top-right
+	     0.5f, -0.5f, // bottom-right
+	    -0.5f, -0.5f  // bottom-left
+    };
+    Shader* pointShader = new Shader("shaders/city_layout.vs", "shaders/city_layout.fs", "shaders/city_layout.gs");
+    unsigned int VBO, containerVAO, pointsVAO, pointsVBO;
+    glGenVertexArrays(1, &pointsVAO);
+    glGenBuffers(1, &pointsVBO);
+    
+    // Set up points VAO and VBO
+    glBindVertexArray(pointsVAO);
+    glBindBuffer(GL_ARRAY_BUFFER, pointsVBO);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(points), points, GL_STATIC_DRAW);
+    glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(float), (void*)0);
+    glEnableVertexAttribArray(0);
+    
+    // Set up container VAO and VBO
     glGenVertexArrays(1, &containerVAO);
     glGenBuffers(1, &VBO);
-    
     glBindVertexArray(containerVAO);
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
@@ -168,6 +188,8 @@ void Renderer3D::Render(Shader* shader){
         glm::mat4 model = glm::mat4(1.0f);
         // testModel.SetMatrices(model, view, projection);
         // testModel.Draw(backpackShader);
+        testFloor.SetMatrices(model, view, projection);
+        testFloor.Draw(backpackShader);
         
         /////////////////////////////////////
         //////This is test stuff/////////////
@@ -254,6 +276,17 @@ void Renderer3D::Render(Shader* shader){
 
             glDrawArrays(GL_TRIANGLES, 0, 36);
         }
+        
+        // Render points (with geometry shader creating lines)
+        // Disable depth test temporarily so lines are always visible
+        glDisable(GL_DEPTH_TEST);
+        pointShader->Use();
+        pointShader->SetMat4("projection", projection);
+        pointShader->SetMat4("view", view);
+        pointShader->SetMat4("model", glm::mat4(1.0f));
+        glBindVertexArray(pointsVAO);
+        glDrawArrays(GL_POINTS, 0, 4);
+        glEnable(GL_DEPTH_TEST);
         
         // also draw the lamp object(s)
         light.Use();
