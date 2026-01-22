@@ -6,9 +6,9 @@ CXX_DEFINES = -DJPH_BUILD_SHARED_LIBRARY -DJPH_SHARED_LIBRARY -DJolt_EXPORTS
 
 CXX_INCLUDES = -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/joltphysics-src -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glad -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/GLFW -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/KHR
 
-CXX_FLAGSarm64 = -std=c++17 -arch arm64 -fPIC -pthread
+CXX_FLAGSarm64 = -g -std=c++17 -arch arm64 -fPIC -pthread
 
-CXX_FLAGS = -std=c++17 -arch arm64 -fPIC -pthread
+CXX_FLAGS = -g -std=c++17 -arch arm64 -fPIC -pthread
 
 # PCH options: CMakeFiles/Jolt.dir/cmake_pch.hxx.pch_OPTIONS = -Winvalid-pch;-Xclang;-emit-pch;-Xclang;-include;-Xclang;/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/CMakeFiles/Jolt.dir/cmake_pch.hxx;-x;c++-header
 

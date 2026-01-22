@@ -1,33 +1,49 @@
 #version 330 core
-layout(points) in;
+layout(lines) in;
 layout(triangle_strip, max_vertices = 4) out;
 
 uniform mat4 projection;
 uniform mat4 view;
+uniform float roadWidth;
+
+out vec3 fragPos;
 
 void main() {
-    // Create a thick horizontal line from each point
-    // These are in clip space, so make them bigger
-    float lineLength = 0.1;  // Length of the line (in clip space)
-    float lineWidth = 0.01;  // Width of the line (thickness in clip space)
+    // Get world space positions (before projection)
+    vec4 startWorld = gl_in[0].gl_Position;
+    vec4 endWorld = gl_in[1].gl_Position;
     
-    vec4 center = gl_in[0].gl_Position;
+    // Calculate direction vector
+    vec3 dir = normalize((endWorld - startWorld).xyz);
     
-    // Create a quad for a thick horizontal line
-    // Bottom-left
-    gl_Position = center + vec4(-lineLength, -lineWidth, 0.0, 0.0);
+    // Calculate perpendicular vector (assuming Y is up)
+    vec3 up = vec3(0.0, 1.0, 0.0);
+    vec3 right = normalize(cross(dir, up));
+    
+    // Create offset for road width
+    vec3 offset = right * roadWidth;
+    
+    // Create quad vertices in world space
+    vec4 v1 = startWorld - vec4(offset, 0.0);
+    vec4 v2 = endWorld - vec4(offset, 0.0);
+    vec4 v3 = startWorld + vec4(offset, 0.0);
+    vec4 v4 = endWorld + vec4(offset, 0.0);
+    
+    // Transform to clip space and emit
+    gl_Position = projection * view * v1;
+    fragPos = v1.xyz;
     EmitVertex();
     
-    // Bottom-right
-    gl_Position = center + vec4(lineLength, -lineWidth, 0.0, 0.0);
+    gl_Position = projection * view * v2;
+    fragPos = v2.xyz;
     EmitVertex();
     
-    // Top-left
-    gl_Position = center + vec4(-lineLength, lineWidth, 0.0, 0.0);
+    gl_Position = projection * view * v3;
+    fragPos = v3.xyz;
     EmitVertex();
     
-    // Top-right
-    gl_Position = center + vec4(lineLength, lineWidth, 0.0, 0.0);
+    gl_Position = projection * view * v4;
+    fragPos = v4.xyz;
     EmitVertex();
     
     EndPrimitive();

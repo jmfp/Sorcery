@@ -10,6 +10,7 @@ uniform vec3 viewPos;
 struct Material {
     sampler2D diffuse;
     sampler2D specular;
+    sampler2D emission;
     float shininess;
 };
 
@@ -33,10 +34,11 @@ struct PointLight {
     vec3 specular;
 };
 
-#define NR_POINT_LIGHTS 4  
+#define MAX_POINT_LIGHTS 32
 uniform Material material;
 uniform DirLight dirLight;
-uniform PointLight pointLights[NR_POINT_LIGHTS];
+uniform PointLight pointLights[MAX_POINT_LIGHTS];
+uniform int numPointLights;
 
 vec3 CalcDirLight(DirLight light, vec3 normal, vec3 viewDir);
 vec3 CalcPointLight(PointLight light, vec3 normal, vec3 fragPos, vec3 viewDir);
@@ -50,7 +52,7 @@ void main()
     // phase 1: Directional lighting
     vec3 result = CalcDirLight(dirLight, norm, viewDir);
     // phase 2: Point lights
-    for(int i = 0; i < NR_POINT_LIGHTS; i++)
+    for(int i = 0; i < numPointLights; i++)
         result += CalcPointLight(pointLights[i], norm, FragPos, viewDir);    
     // phase 3: Spot light
     //result += CalcSpotLight(spotLight, norm, FragPos, viewDir);    
@@ -70,7 +72,8 @@ vec3 CalcDirLight(DirLight light, vec3 normal, vec3 viewDir)
     vec3 ambient  = light.ambient  * vec3(texture(material.diffuse, TexCoords));
     vec3 diffuse  = light.diffuse  * diff * vec3(texture(material.diffuse, TexCoords));
     vec3 specular = light.specular * spec * vec3(texture(material.specular, TexCoords));
-    return (ambient + diffuse + specular);
+    vec3 emission = vec3(texture(material.emission, TexCoords));
+    return (ambient + diffuse + specular + emission);
 }
 
 vec3 CalcPointLight(PointLight light, vec3 normal, vec3 fragPos, vec3 viewDir)

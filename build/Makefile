@@ -3335,6 +3335,30 @@ src/GameObject.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/GameObject.cpp.s
 .PHONY : src/GameObject.cpp.s
 
+src/Light.o: src/Light.cpp.o
+.PHONY : src/Light.o
+
+# target to build an object file
+src/Light.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Light.cpp.o
+.PHONY : src/Light.cpp.o
+
+src/Light.i: src/Light.cpp.i
+.PHONY : src/Light.i
+
+# target to preprocess a source file
+src/Light.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Light.cpp.i
+.PHONY : src/Light.cpp.i
+
+src/Light.s: src/Light.cpp.s
+.PHONY : src/Light.s
+
+# target to generate assembly for a file
+src/Light.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Light.cpp.s
+.PHONY : src/Light.cpp.s
+
 src/Mesh.o: src/Mesh.cpp.o
 .PHONY : src/Mesh.o
 
@@ -3431,6 +3455,30 @@ src/Renderer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Renderer.cpp.s
 .PHONY : src/Renderer.cpp.s
 
+src/Scene.o: src/Scene.cpp.o
+.PHONY : src/Scene.o
+
+# target to build an object file
+src/Scene.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Scene.cpp.o
+.PHONY : src/Scene.cpp.o
+
+src/Scene.i: src/Scene.cpp.i
+.PHONY : src/Scene.i
+
+# target to preprocess a source file
+src/Scene.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Scene.cpp.i
+.PHONY : src/Scene.cpp.i
+
+src/Scene.s: src/Scene.cpp.s
+.PHONY : src/Scene.s
+
+# target to generate assembly for a file
+src/Scene.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Scene.cpp.s
+.PHONY : src/Scene.cpp.s
+
 src/Shader.o: src/Shader.cpp.o
 .PHONY : src/Shader.o
 
@@ -3478,6 +3526,30 @@ src/Texture.s: src/Texture.cpp.s
 src/Texture.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Texture.cpp.s
 .PHONY : src/Texture.cpp.s
+
+src/Transform.o: src/Transform.cpp.o
+.PHONY : src/Transform.o
+
+# target to build an object file
+src/Transform.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Transform.cpp.o
+.PHONY : src/Transform.cpp.o
+
+src/Transform.i: src/Transform.cpp.i
+.PHONY : src/Transform.i
+
+# target to preprocess a source file
+src/Transform.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Transform.cpp.i
+.PHONY : src/Transform.cpp.i
+
+src/Transform.s: src/Transform.cpp.s
+.PHONY : src/Transform.s
+
+# target to generate assembly for a file
+src/Transform.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Transform.cpp.s
+.PHONY : src/Transform.cpp.s
 
 src/Window.o: src/Window.cpp.o
 .PHONY : src/Window.o
@@ -3935,6 +4007,9 @@ help:
 	@echo "... src/GameObject.o"
 	@echo "... src/GameObject.i"
 	@echo "... src/GameObject.s"
+	@echo "... src/Light.o"
+	@echo "... src/Light.i"
+	@echo "... src/Light.s"
 	@echo "... src/Mesh.o"
 	@echo "... src/Mesh.i"
 	@echo "... src/Mesh.s"
@@ -3947,12 +4022,18 @@ help:
 	@echo "... src/Renderer.o"
 	@echo "... src/Renderer.i"
 	@echo "... src/Renderer.s"
+	@echo "... src/Scene.o"
+	@echo "... src/Scene.i"
+	@echo "... src/Scene.s"
 	@echo "... src/Shader.o"
 	@echo "... src/Shader.i"
 	@echo "... src/Shader.s"
 	@echo "... src/Texture.o"
 	@echo "... src/Texture.i"
 	@echo "... src/Texture.s"
+	@echo "... src/Transform.o"
+	@echo "... src/Transform.i"
+	@echo "... src/Transform.s"
 	@echo "... src/Window.o"
 	@echo "... src/Window.i"
 	@echo "... src/Window.s"

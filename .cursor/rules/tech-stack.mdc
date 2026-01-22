@@ -1,0 +1,206 @@
+---
+description: Technology stack and dependencies used in the OpenGL game engine project
+globs: **/*
+alwaysApply: true
+---
+
+# Technology Stack
+
+This document outlines the technologies, libraries, and tools used in the OpenGL game engine project.
+
+## Core Language & Standard
+
+- **C++23**: Primary programming language
+  - Modern C++ features enabled
+  - Standard required: C++23
+  - Compiler must support C++23 standard
+
+## Graphics & Rendering
+
+### OpenGL
+
+- **OpenGL**: Core graphics API
+  - Version: 3.3+ (configured in Window initialization)
+  - Cross-platform graphics rendering
+  - Direct GPU access for rendering pipeline
+
+### GLAD
+
+- **GLAD (OpenGL Loader)**: OpenGL function loading
+  - Location: `include/glad/`
+  - Provides OpenGL function pointers
+  - Eliminates need for manual function loading
+  - Generated for specific OpenGL version
+
+### GLFW
+
+- **GLFW 3**: Window and input management
+  - Version: 3.x
+  - Cross-platform window creation
+  - Input handling (keyboard, mouse)
+  - OpenGL context management
+  - Static library: `lib/libglfw3.a`
+  - Dynamic library: `lib/libglfw.3.dylib` (macOS)
+
+### GLM
+
+- **GLM (OpenGL Mathematics)**: Mathematics library
+  - Location: `include/glm/`
+  - Vector and matrix operations
+  - Transformations (translate, rotate, scale)
+  - Projection matrices (perspective, orthographic)
+  - GLSL-like API for C++
+  - Header-only library
+
+### GLSL
+
+- **GLSL (OpenGL Shading Language)**: Shader programming
+  - Vertex shaders (`.vs`)
+  - Fragment shaders (`.fs`)
+  - Geometry shaders (`.gs`) - optional
+  - Shader files in `src/shaders/`
+
+## Asset Loading
+
+### Assimp
+
+- **Assimp (Open Asset Import Library)**: 3D model loading
+  - Version: v5.3.1
+  - Fetched via CMake FetchContent
+  - Supports multiple formats: OBJ, FBX, DAE, 3DS, etc.
+  - Handles model hierarchy, materials, textures
+  - Location: `build/_deps/assimp-src/`
+
+### STB Image
+
+- **stb_image**: Image loading utility
+  - Header: `include/stb_image.h`
+  - Implementation: `src/stb_image.cpp`
+  - Single-file header library
+  - Supports: PNG, JPG, BMP, TGA, etc.
+  - Used for texture loading
+
+## Physics
+
+### Jolt Physics
+
+- **Jolt Physics**: Physics simulation engine
+  - Version: v5.5.0
+  - Fetched via CMake FetchContent
+  - High-performance physics engine
+  - Location: `build/_deps/joltphysics-src/`
+  - Tests, samples, and examples disabled in build
+
+## Build System
+
+### CMake
+
+- **CMake**: Build system generator
+  - Minimum version: 3.10
+  - Generates platform-specific build files
+  - Manages dependencies via FetchContent
+  - Handles cross-platform compilation
+  - Configuration: `CMakeLists.txt`
+
+### Build Script
+
+- **build.sh**: Build automation script
+  - Simplifies build process
+  - Handles CMake configuration and compilation
+
+## Platform Support
+
+### macOS
+
+- **Frameworks**: Required for macOS builds
+  - Cocoa: Window and application management
+  - IOKit: Input/output kit
+  - CoreVideo: Video display services
+  - Automatically linked in CMakeLists.txt
+
+### Cross-Platform Considerations
+
+- OpenGL provides cross-platform graphics
+- GLFW handles platform-specific windowing
+- CMake manages platform-specific build configurations
+- Dependencies fetched at build time
+
+## Development Tools
+
+### Cursor IDE
+
+- **Cursor**: AI-powered code editor
+  - Rules system: `.cursor/rules/`
+  - Markdown-based rule files (`.mdc`)
+  - Project-specific guidelines and patterns
+
+## File Formats
+
+### 3D Models
+
+- **OBJ**: Wavefront OBJ format
+- **MTL**: Material template library
+- **Other formats**: Via Assimp support
+
+### Textures
+
+- **PNG**: Portable Network Graphics
+- **JPG/JPEG**: Joint Photographic Experts Group
+- **Other formats**: Via stb_image support
+
+### Shaders
+
+- **GLSL**: OpenGL Shading Language source files
+- Plain text files with `.vs`, `.fs`, `.gs` extensions
+
+## Dependency Management
+
+### FetchContent (CMake)
+
+- **FetchContent**: CMake dependency management
+  - Downloads dependencies at configure time
+  - Builds dependencies as part of project
+  - No manual dependency installation required
+  - Used for:
+    - Assimp
+    - Jolt Physics
+
+### Static Libraries
+
+- **GLFW**: Pre-built static library
+  - Location: `lib/libglfw3.a`
+  - Platform-specific builds required
+
+### Header-Only Libraries
+
+- **GLM**: Header-only, no linking required
+- **STB**: Header-only with implementation file
+
+## Version Information
+
+Current dependency versions:
+- **Assimp**: v5.3.1
+- **Jolt Physics**: v5.5.0
+- **C++ Standard**: C++23
+- **CMake**: 3.10+ (minimum)
+
+## External Resources
+
+- **GitHub Repositories**:
+  - Assimp: https://github.com/assimp/assimp.git
+  - Jolt Physics: https://github.com/jrouwe/JoltPhysics.git
+
+## Build Output
+
+- **Executable**: `build/OpenGL`
+- **Libraries**: `build/libJolt.dylib` (macOS)
+- **Shaders**: Copied to `build/shaders/` at build time
+- **Dependencies**: Built in `build/_deps/`
+
+## Development Workflow
+
+1. **CMake Configuration**: Generates build files
+2. **Dependency Fetching**: Downloads and builds Assimp and Jolt
+3. **Compilation**: Builds engine and application
+4. **Asset Copying**: Shaders copied to build directory
+5. **Execution**: Run from build directory for asset paths

@@ -1,0 +1,184 @@
+---
+description: Current project structure and organization of the OpenGL game engine
+globs: **/*
+alwaysApply: true
+---
+
+# Project Structure
+
+This document outlines the current structure and organization of the OpenGL game engine project.
+
+## Directory Structure
+
+```
+OpenGL/
+├── .cursor/
+│   └── rules/          # Cursor IDE rules and guidelines
+├── build/              # CMake build output directory
+│   ├── _deps/          # External dependencies (Assimp, Jolt Physics)
+│   └── shaders/        # Copied shader files for runtime
+├── docs/               # Project documentation
+│   └── engine-architecture.md
+├── include/            # Header files
+│   ├── engine/         # Core engine headers
+│   ├── glad/           # OpenGL loader (GLAD)
+│   ├── GLFW/           # Window management library
+│   ├── glm/            # Mathematics library
+│   ├── KHR/            # Khronos platform headers
+│   └── stb_image.h     # Image loading utility
+├── lib/                # Static libraries
+│   ├── libglfw3.a      # GLFW static library
+│   └── libglfw.3.dylib # GLFW dynamic library (macOS)
+├── src/                # Source files
+│   ├── engine/         # Engine implementation (if any)
+│   ├── models/         # 3D model assets
+│   ├── shaders/        # GLSL shader source files
+│   └── textures/       # Texture image files
+├── CMakeLists.txt      # CMake build configuration
+├── main.cpp            # Application entry point
+└── build.sh            # Build script
+```
+
+## Core Engine Architecture
+
+### Component-Based System
+
+The engine follows a component-based architecture:
+
+- **GameObject**: Container for components and child objects
+  - Manages component lifecycle
+  - Supports hierarchical scene structure
+  - Provides transform access
+
+- **Component**: Base class for all game components
+  - Components attach to GameObjects
+  - Supports polymorphic component retrieval via templates
+
+- **Scene**: Manages game objects and rendering
+  - Contains collection of GameObjects
+  - Manages default shader and camera
+  - Handles view/projection matrix setup
+
+### Rendering Pipeline
+
+- **Renderer**: Base rendering class
+  - **Renderer3D**: 3D-specific rendering implementation
+  - Works with Window and Scene objects
+
+- **Mesh**: Represents 3D geometry
+  - Contains vertices, indices, and textures
+  - Manages OpenGL VAO/VBO/EBO buffers
+  - Handles mesh drawing operations
+
+- **MeshRenderer**: Component that renders meshes
+  - Attaches to GameObjects
+  - Implements Drawable interface
+
+- **Shader**: GLSL shader program wrapper
+  - Manages vertex, fragment, and optional geometry shaders
+  - Provides uniform setting methods
+  - Handles shader compilation and linking
+
+- **Texture**: Image texture management
+  - Loads and manages OpenGL texture objects
+  - Supports various image formats via stb_image
+
+### Window Management
+
+- **Window**: GLFW window wrapper
+  - Handles window initialization
+  - Processes input for camera control
+  - Manages OpenGL context
+
+### Camera System
+
+- **Camera**: 3D camera implementation
+  - Provides view matrix calculation
+  - Handles camera movement and rotation
+  - Manages field of view (zoom)
+
+### Asset Management
+
+- **Model**: 3D model loader (Assimp integration)
+  - Loads various 3D model formats
+  - Parses model hierarchy and materials
+
+- **Material**: Material properties
+  - Defines surface properties for rendering
+
+- **Light**: Lighting system
+  - Supports various light types
+
+### Utility Systems
+
+- **Transform**: Position, rotation, scale
+  - Attached to every GameObject
+  - Provides transformation matrices
+
+- **Math**: Mathematical utilities
+  - Helper functions and constants
+
+- **Procedural**: Procedural generation utilities
+  - Functions for generating geometry
+
+## File Organization Patterns
+
+### Headers (`include/engine/`)
+
+All engine headers are in `include/engine/`:
+- Use `#pragma once` for include guards
+- Include paths use `#include <engine/ClassName.h>` format
+- Headers define interfaces and forward declarations
+
+### Source Files (`src/`)
+
+- Implementation files mirror header structure
+- Source files use relative includes for engine headers
+- External library includes use angle brackets
+
+### Shaders (`src/shaders/`)
+
+Shader files follow naming conventions:
+- `*.vs` - Vertex shaders
+- `*.fs` - Fragment shaders
+- `*.gs` - Geometry shaders (optional)
+- Shader pairs often share base names (e.g., `container.vs` + `container.fs`)
+
+### Assets
+
+- **Models**: `src/models/` - 3D model files (.obj, .mtl, textures)
+- **Textures**: `src/textures/` - Image files for materials
+- Assets referenced with relative paths from executable location
+
+## Build System
+
+- **CMake**: Primary build system
+  - C++23 standard
+  - Uses FetchContent for dependencies
+  - Platform-specific configuration (macOS frameworks)
+  - Copies shaders to build directory
+
+- **Dependencies**:
+  - Assimp (v5.3.1) - Model loading
+  - Jolt Physics (v5.5.0) - Physics engine
+  - GLFW - Window management
+  - GLAD - OpenGL loading
+  - GLM - Mathematics
+
+## Entry Point
+
+`main.cpp` serves as the application entry point:
+- Initializes window and OpenGL context
+- Creates scene and game objects
+- Sets up rendering pipeline
+- Manages main game loop
+
+## Current Architecture Notes
+
+- Scene-based rendering system
+- Component-based GameObject system
+- Separation of rendering logic from game logic
+- Shader-based material system
+- Support for multiple light types
+- Model loading via Assimp
+- Physics integration via Jolt Physics (configured but usage may vary)

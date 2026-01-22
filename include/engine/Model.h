@@ -16,7 +16,7 @@ class Model
         Model(char* path){
             loadModel(path);
         };
-        vector<MeshTexture> textures_loaded;
+        vector<Texture*> textures_loaded;
         void SetShader(Shader shader){
             for(unsigned int i = 0; i < meshes.size(); i++)
                 meshes[i].SetShader(shader);
@@ -37,6 +37,6 @@ class Model
         void loadModel(string path);
         void processNode(aiNode* node, const aiScene* scene);
         Mesh processMesh(aiMesh* mesh, const aiScene* scene);
-        vector<MeshTexture> loadMaterialTextures(aiMaterial* mat, aiTextureType type, string typeName);
+        vector<Texture*> loadMaterialTextures(aiMaterial* mat, aiTextureType type, TextureType textureType);
         unsigned int TextureFromFile(const char *path, const string &directory, bool gamma);
 };

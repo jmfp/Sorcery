@@ -1,7 +1,10 @@
 #version 330 core
 out vec4 FragColor;
 
+in vec3 fragPos;
+
 void main()
 {
-    FragColor = vec4(0.0, 1.0, 0.0, 1.0);   
+    // Road color - bright white for visibility
+    FragColor = vec4(1.0, 1.0, 1.0, 1.0);
 }

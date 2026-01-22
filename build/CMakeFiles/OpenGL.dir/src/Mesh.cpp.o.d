@@ -1109,4 +1109,6 @@ CMakeFiles/OpenGL.dir/src/Mesh.cpp.o: \
   /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/../mat4x2.hpp \
   /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/../mat4x3.hpp \
   /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/../mat4x4.hpp \
-  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/type_ptr.inl
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/type_ptr.inl \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Texture.h \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/stb_image.h

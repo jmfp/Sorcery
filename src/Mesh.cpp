@@ -4,9 +4,10 @@
 #include <engine/Shader.h>
 #include <glm/glm.hpp>
 #include <glm/gtc/type_ptr.hpp>
+#include <engine/Texture.h>
 
 
-Mesh::Mesh(std::vector<Vertex> vertices, std::vector<unsigned int> indices, std::vector<MeshTexture> textures)
+Mesh::Mesh(std::vector<Vertex> vertices, std::vector<unsigned int> indices, std::vector<Texture*> textures)
     : vertices(vertices), 
       indices(indices), 
       textures(textures),
@@ -54,13 +55,16 @@ void Mesh::Draw(Shader &shader, glm::mat4 model, glm::mat4 view, glm::mat4 proje
     {
         glActiveTexture(GL_TEXTURE0 + i);
         std::string number;
-        std::string name = textures[i].type;
+        std::string name = textures[i]->GetType() == TextureType::DIFFUSE ? "texture_diffuse" :
+                           textures[i]->GetType() == TextureType::SPECULAR ? "texture_specular" :
+                           textures[i]->GetType() == TextureType::NORMAL ? "texture_normal" :
+                           textures[i]->GetType() == TextureType::HEIGHT ? "texture_height" : "texture_unknown";
         if(name == "texture_diffuse")
             number = std::to_string(diffuseNr++);
         else if(name == "texture_specular")
             number = std::to_string(specularNr++);
         shader.SetInt((name + number).c_str(), i);
-        glBindTexture(GL_TEXTURE_2D, textures[i].id);
+        glBindTexture(GL_TEXTURE_2D, textures[i]->GetTexture());
     }
     glBindVertexArray(VAO);
     glDrawElements(GL_TRIANGLES, indices.size(), GL_UNSIGNED_INT, 0);

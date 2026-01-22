@@ -1111,6 +1111,8 @@ CMakeFiles/OpenGL.dir/src/Model.cpp.o: \
   /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/../mat4x3.hpp \
   /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/../mat4x4.hpp \
   /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/type_ptr.inl \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Texture.h \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/stb_image.h \
   /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Camera.h \
   /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include/assimp/scene.h \
   /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include/assimp/types.h \
@@ -1142,5 +1144,4 @@ CMakeFiles/OpenGL.dir/src/Model.cpp.o: \
   /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include/assimp/metadata.h \
   /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include/assimp/Importer.hpp \
   /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include/assimp/postprocess.h \
-  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/matrix_transform.hpp \
-  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/stb_image.h
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/matrix_transform.hpp
