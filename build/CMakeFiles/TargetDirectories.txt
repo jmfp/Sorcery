@@ -1,5 +1,8 @@
+/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/CMakeFiles/imgui.dir
 /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/CMakeFiles/Jolt.dir
+/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/CMakeFiles/engine_objects.dir
 /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/CMakeFiles/OpenGL.dir
+/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/CMakeFiles/Editor.dir
 /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/CMakeFiles/edit_cache.dir
 /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/CMakeFiles/rebuild_cache.dir
 /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/CMakeFiles/list_install_components.dir

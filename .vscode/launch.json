@@ -23,6 +23,26 @@
                     "ignoreFailures": true
                 }
             ]
+        },
+        {
+            "name": "Debug Editor",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/Editor",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/build",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "preLaunchTask": "build",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for lldb",
+                    "text": "settings set target.process.thread.step-avoid-regexp ^std::",
+                    "ignoreFailures": true
+                }
+            ]
         }
     ]
 }

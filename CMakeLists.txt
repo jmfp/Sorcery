@@ -33,6 +33,38 @@ set(JPH_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
 
 FetchContent_MakeAvailable(JoltPhysics)
 
+# Add ImGui
+FetchContent_Declare(
+    ImGui
+    GIT_REPOSITORY https://github.com/ocornut/imgui.git
+    GIT_TAG docking
+)
+FetchContent_MakeAvailable(ImGui)
+
+# Get ImGui source directory
+FetchContent_GetProperties(ImGui SOURCE_DIR IMGUI_SRC_DIR)
+if(NOT IMGUI_SRC_DIR)
+    set(IMGUI_SRC_DIR "${CMAKE_BINARY_DIR}/_deps/imgui-src")
+endif()
+
+# Create ImGui library target
+add_library(imgui STATIC
+    ${IMGUI_SRC_DIR}/imgui.cpp
+    ${IMGUI_SRC_DIR}/imgui_demo.cpp
+    ${IMGUI_SRC_DIR}/imgui_draw.cpp
+    ${IMGUI_SRC_DIR}/imgui_tables.cpp
+    ${IMGUI_SRC_DIR}/imgui_widgets.cpp
+    ${IMGUI_SRC_DIR}/backends/imgui_impl_glfw.cpp
+    ${IMGUI_SRC_DIR}/backends/imgui_impl_opengl3.cpp
+)
+
+target_include_directories(imgui PUBLIC 
+    ${IMGUI_SRC_DIR}
+    ${IMGUI_SRC_DIR}/backends
+    ${CMAKE_SOURCE_DIR}/include
+    ${CMAKE_SOURCE_DIR}/include/GLFW
+)
+
 # Build Jolt Physics library
 # After FetchContent_MakeAvailable, the source is at build/_deps/<name>-src
 # We can construct the path or use the variable that FetchContent sets
@@ -52,43 +84,71 @@ endif()
 set(PHYSICS_REPO_ROOT ${JOLT_SRC_DIR})
 include(${JOLT_SRC_DIR}/Jolt/Jolt.cmake)
 
-# Include directories
-include_directories(
+# Engine source files (excluding entry points)
+file(GLOB_RECURSE ENGINE_SOURCES
+    "src/*.cpp"
+)
+
+# Create object library for shared engine code
+add_library(engine_objects OBJECT
+    ${ENGINE_SOURCES}
+    include/glad/glad.c
+)
+
+# Set include directories for engine objects
+target_include_directories(engine_objects PUBLIC
     ${CMAKE_SOURCE_DIR}/include
     ${CMAKE_SOURCE_DIR}/include/glad
     ${CMAKE_SOURCE_DIR}/include/GLFW
     ${CMAKE_SOURCE_DIR}/include/KHR
 )
 
-# Source files
-file(GLOB_RECURSE SOURCES
-    "src/*.cpp"
-)
-list(APPEND SOURCES
-    main.cpp
-    include/glad/glad.c
-)
-
-# Create executable
-add_executable(OpenGL ${SOURCES})
-
-# Link libraries
-target_link_libraries(OpenGL
+# Link common dependencies to engine objects
+target_link_libraries(engine_objects PUBLIC
     ${CMAKE_SOURCE_DIR}/lib/libglfw3.a
     OpenGL::GL
     assimp::assimp
     Jolt::Jolt
 )
 
-# Copy shader files to build directory
-file(COPY ${CMAKE_SOURCE_DIR}/src/shaders DESTINATION ${CMAKE_BINARY_DIR})
-
-# macOS specific: link Cocoa, IOKit, and CoreVideo frameworks
+# macOS frameworks for engine objects
 if(APPLE)
-    target_link_libraries(OpenGL
+    target_link_libraries(engine_objects PUBLIC
         "-framework Cocoa"
         "-framework IOKit"
         "-framework CoreVideo"
     )
 endif()
+
+# Engine executable (main.cpp)
+add_executable(OpenGL
+    main.cpp
+    $<TARGET_OBJECTS:engine_objects>
+)
+
+target_link_libraries(OpenGL PRIVATE engine_objects)
+
+# Editor executable (editor/editor.cpp)
+add_executable(Editor
+    editor/editor.cpp
+    $<TARGET_OBJECTS:engine_objects>
+)
+
+target_link_libraries(Editor PRIVATE 
+    engine_objects
+    imgui
+)
+
+# macOS frameworks for Editor
+if(APPLE)
+    target_link_libraries(Editor PRIVATE
+        "-framework Cocoa"
+        "-framework IOKit"
+        "-framework CoreVideo"
+    )
+endif()
+
+# Copy shader files to build directory
+file(COPY ${CMAKE_SOURCE_DIR}/src/shaders DESTINATION ${CMAKE_BINARY_DIR})
+
 

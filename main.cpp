@@ -76,24 +76,24 @@ int main()
     Material* material = new Material(textures, 32.0f);
     
     unsigned int indices[] = {
-        // Front face (6 vertices)
+        // Front face - reuse vertices 2 and 0
         0, 1, 2,   // first triangle
-        3, 4, 5,   // second triangle
-        // Back face (6 vertices)
+        2, 4, 0,   // second triangle (reuses 2 and 0)
+        // Back face - reuse vertices 8 and 6
         6, 7, 8,   // first triangle
-        9, 10, 11, // second triangle
-        // Left face (6 vertices)
+        8, 10, 6,  // second triangle (reuses 8 and 6)
+        // Left face - reuse vertices 14 and 12
         12, 13, 14, // first triangle
-        15, 16, 17, // second triangle
-        // Right face (6 vertices)
+        14, 16, 12, // second triangle (reuses 14 and 12)
+        // Right face - reuse vertices 20 and 18
         18, 19, 20, // first triangle
-        21, 22, 23, // second triangle
-        // Bottom face (6 vertices)
+        20, 22, 18, // second triangle (reuses 20 and 18)
+        // Bottom face - reuse vertices 26 and 24
         24, 25, 26, // first triangle
-        27, 28, 29, // second triangle
-        // Top face (6 vertices)
+        26, 28, 24, // second triangle (reuses 26 and 24)
+        // Top face - reuse vertices 32 and 30
         30, 31, 32, // first triangle
-        33, 34, 35  // second triangle
+        32, 34, 30  // second triangle (reuses 32 and 30)
     };
     std::vector<unsigned int> indicesVec(indices, indices + sizeof(indices) / sizeof(indices[0]));
     Mesh* cubeMesh = new Mesh(boxVerts, indicesVec, textures);

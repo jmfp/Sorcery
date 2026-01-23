@@ -39,12 +39,12 @@ endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "libassimp5.3.0" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES
-    "/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-build/bin/libassimp.5.3.0.dylib"
-    "/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-build/bin/libassimp.5.dylib"
+    "/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-build/bin/libassimpd.5.3.0.dylib"
+    "/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-build/bin/libassimpd.5.dylib"
     )
   foreach(file
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libassimp.5.3.0.dylib"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libassimp.5.dylib"
+      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libassimpd.5.3.0.dylib"
+      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libassimpd.5.dylib"
       )
     if(EXISTS "${file}" AND
        NOT IS_SYMLINK "${file}")
@@ -56,7 +56,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "libassimp5.3.0" OR NOT CMAKE_INSTALL_COMPON
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "libassimp5.3.0" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-build/bin/libassimp.dylib")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-build/bin/libassimpd.dylib")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "assimp-dev" OR NOT CMAKE_INSTALL_COMPONENT)

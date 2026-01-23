@@ -60,7 +60,7 @@ add_library(assimp::assimp SHARED IMPORTED)
 
 set_target_properties(assimp::assimp PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include;${_IMPORT_PREFIX}/include"
-  INTERFACE_LINK_LIBRARIES "\$<\$<NOT:\$<CONFIG:DEBUG>>:/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libz.tbd>;\$<\$<CONFIG:DEBUG>:/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libz.tbd>"
+  INTERFACE_LINK_LIBRARIES "\$<\$<NOT:\$<CONFIG:DEBUG>>:/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/libz.tbd>;\$<\$<CONFIG:DEBUG>:/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/libz.tbd>"
 )
 
 # Load information for each installed configuration.

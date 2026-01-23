@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DJPH_BUILD_SHARED_LIBRARY -DJPH_SHARED_LIBRARY -DJolt_EXPORTS
 
-CXX_INCLUDES = -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/joltphysics-src -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glad -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/GLFW -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/KHR
+CXX_INCLUDES = -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/joltphysics-src
 
 CXX_FLAGSarm64 = -g -std=c++17 -arch arm64 -fPIC -pthread
 

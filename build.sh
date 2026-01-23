@@ -1,8 +1,8 @@
+TARGET=${1:-OpenGL}  # Default to OpenGL if no argument provided
+
 mkdir -p build
 cd build
-# cmake ..
 cmake -DCMAKE_BUILD_TYPE=Debug ..
-# rm -rf CMakeCache.txt CMakeFiles/
 make
-./OpenGL
+./$TARGET
 cd ..

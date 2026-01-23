@@ -76,6 +76,7 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "_deps/assimp-subbuild/CMakeLists.txt"
   "_deps/joltphysics-subbuild/CMakeLists.txt"
+  "_deps/imgui-subbuild/CMakeLists.txt"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "_deps/assimp-build/generated/assimpConfigVersion.cmake"
   "_deps/assimp-build/generated/assimpConfig.cmake"
@@ -88,7 +89,10 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/imgui.dir/DependInfo.cmake"
   "CMakeFiles/Jolt.dir/DependInfo.cmake"
+  "CMakeFiles/engine_objects.dir/DependInfo.cmake"
   "CMakeFiles/OpenGL.dir/DependInfo.cmake"
+  "CMakeFiles/Editor.dir/DependInfo.cmake"
   "_deps/assimp-build/code/CMakeFiles/assimp.dir/DependInfo.cmake"
   )

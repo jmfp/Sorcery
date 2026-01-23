@@ -67,10 +67,6 @@ ASSIMP_COVERALLS:BOOL=OFF
 //Set to ON to enable double precision processing
 ASSIMP_DOUBLE_PRECISION:BOOL=OFF
 
-//adds the target headercheck which compiles every header file,
-// default disabled because it adds many targets
-ASSIMP_HEADERCHECK:BOOL=OFF
-
 //Enable Hunter package manager support
 ASSIMP_HUNTER_ENABLED:BOOL=OFF
 
@@ -173,7 +169,7 @@ CMAKE_C_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 CMAKE_C_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
 //Debug Postfix for lib, samples and tools
-CMAKE_DEBUG_POSTFIX:STRING=
+CMAKE_DEBUG_POSTFIX:STRING=d
 
 //Path to a program.
 CMAKE_DLLTOOL:FILEPATH=CMAKE_DLLTOOL-NOTFOUND
@@ -406,6 +402,10 @@ FETCHCONTENT_QUIET:BOOL=ON
 FETCHCONTENT_SOURCE_DIR_ASSIMP:PATH=
 
 //When not empty, overrides where to find pre-populated content
+// for ImGui
+FETCHCONTENT_SOURCE_DIR_IMGUI:PATH=
+
+//When not empty, overrides where to find pre-populated content
 // for JoltPhysics
 FETCHCONTENT_SOURCE_DIR_JOLTPHYSICS:PATH=
 
@@ -414,6 +414,9 @@ FETCHCONTENT_UPDATES_DISCONNECTED:BOOL=OFF
 
 //Enables UPDATE_DISCONNECTED behavior just for population of assimp
 FETCHCONTENT_UPDATES_DISCONNECTED_ASSIMP:BOOL=OFF
+
+//Enables UPDATE_DISCONNECTED behavior just for population of ImGui
+FETCHCONTENT_UPDATES_DISCONNECTED_IMGUI:BOOL=OFF
 
 //Enables UPDATE_DISCONNECTED behavior just for population of JoltPhysics
 FETCHCONTENT_UPDATES_DISCONNECTED_JOLTPHYSICS:BOOL=OFF
@@ -428,16 +431,16 @@ JPH_BUILD_SAMPLES:BOOL=OFF
 JPH_BUILD_TESTS:BOOL=OFF
 
 //Include for the OpenGL GLU library
-OPENGL_GLU_INCLUDE_DIR:PATH=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework
+OPENGL_GLU_INCLUDE_DIR:PATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework
 
 //Include for OpenGL
-OPENGL_INCLUDE_DIR:PATH=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework
+OPENGL_INCLUDE_DIR:PATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework
 
 //OpenGL GL library
-OPENGL_gl_LIBRARY:FILEPATH=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework
+OPENGL_gl_LIBRARY:FILEPATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework
 
 //OpenGL GLU library
-OPENGL_glu_LIBRARY:FILEPATH=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework
+OPENGL_glu_LIBRARY:FILEPATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework
 
 //Value Computed by CMake
 OpenGL_BINARY_DIR:STATIC=/Users/jesseprice/Development/Personal/Britemune/OpenGL/build
@@ -458,35 +461,22 @@ PKG_CONFIG_EXECUTABLE:FILEPATH=/opt/homebrew/bin/pkg-config
 RT_LIBRARY:FILEPATH=RT_LIBRARY-NOTFOUND
 
 //Path to a file.
-ZLIB_INCLUDE_DIR:PATH=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include
+ZLIB_INCLUDE_DIR:PATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include
 
 //Path to a library.
-ZLIB_LIBRARY_DBG:FILEPATH=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libz.tbd
+ZLIB_LIBRARY_DBG:FILEPATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/libz.tbd
 
 //Path to a library.
-ZLIB_LIBRARY_REL:FILEPATH=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libz.tbd
+ZLIB_LIBRARY_REL:FILEPATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/libz.tbd
 
 //Dependencies for the target
-assimp_LIB_DEPENDS:STATIC=optimized;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libz.tbd;debug;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libz.tbd;
-
-//Value Computed by CMake
-zlib_BINARY_DIR:STATIC=/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-build/contrib/zlib
-
-//Value Computed by CMake
-zlib_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-zlib_SOURCE_DIR:STATIC=/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/contrib/zlib
+assimp_LIB_DEPENDS:STATIC=optimized;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/libz.tbd;debug;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/libz.tbd;
 
 
 ########################
 # INTERNAL cache entries
 ########################
 
-//Enable building amd64 assembly implementation
-AMD64:INTERNAL=FALSE
-//Enable building i686 assembly implementation
-ASM686:INTERNAL=FALSE
 //ADVANCED property for variable: ASSIMP_BUILD_ARCHITECTURE
 ASSIMP_BUILD_ARCHITECTURE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: ASSIMP_BUILD_COMPILER
@@ -665,23 +655,11 @@ CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding OpenGL
-FIND_PACKAGE_MESSAGE_DETAILS_OpenGL:INTERNAL=[/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework][/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework][ ][v()]
+FIND_PACKAGE_MESSAGE_DETAILS_OpenGL:INTERNAL=[/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework][/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework][ ][v()]
 //Details about finding PkgConfig
 FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/opt/homebrew/bin/pkg-config][v2.5.1()]
 //ADVANCED property for variable: GIT_EXECUTABLE
 GIT_EXECUTABLE-ADVANCED:INTERNAL=1
-//Have function fseeko
-HAVE_FSEEKO:INTERNAL=1
-//Result of TRY_COMPILE
-HAVE_OFF64_T:INTERNAL=FALSE
-//Have include stddef.h
-HAVE_STDDEF_H:INTERNAL=1
-//Have include stdint.h
-HAVE_STDINT_H:INTERNAL=1
-//Have include sys/types.h
-HAVE_SYS_TYPES_H:INTERNAL=1
-//CHECK_TYPE_SIZE: off64_t unknown
-OFF64_T:INTERNAL=
 //ADVANCED property for variable: OPENGL_GLU_INCLUDE_DIR
 OPENGL_GLU_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OPENGL_INCLUDE_DIR
@@ -754,8 +732,6 @@ ZLIB_PKGC_zzip-zlib-config_PREFIX:INTERNAL=
 ZLIB_PKGC_zzip-zlib-config_VERSION:INTERNAL=
 //x
 ZLIB_PREFIX_PATH_INT_CHECK:INTERNAL=
-//Have include unistd.h
-Z_HAVE_UNISTD_H:INTERNAL=1
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
 __pkg_config_checked_UNZIP:INTERNAL=1
