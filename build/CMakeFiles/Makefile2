@@ -199,8 +199,8 @@ CMakeFiles/Jolt.dir/clean:
 # Target rules for target CMakeFiles/engine_objects.dir
 
 # All Build rule for target.
-CMakeFiles/engine_objects.dir/all: _deps/assimp-build/code/CMakeFiles/assimp.dir/all
 CMakeFiles/engine_objects.dir/all: CMakeFiles/Jolt.dir/all
+CMakeFiles/engine_objects.dir/all: _deps/assimp-build/code/CMakeFiles/assimp.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine_objects.dir/build.make CMakeFiles/engine_objects.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine_objects.dir/build.make CMakeFiles/engine_objects.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/CMakeFiles --progress-num=94,95,96,97 "Built target engine_objects"
@@ -232,9 +232,9 @@ CMakeFiles/engine_objects.dir/clean:
 # Target rules for target CMakeFiles/OpenGL.dir
 
 # All Build rule for target.
-CMakeFiles/OpenGL.dir/all: _deps/assimp-build/code/CMakeFiles/assimp.dir/all
 CMakeFiles/OpenGL.dir/all: CMakeFiles/Jolt.dir/all
 CMakeFiles/OpenGL.dir/all: CMakeFiles/engine_objects.dir/all
+CMakeFiles/OpenGL.dir/all: _deps/assimp-build/code/CMakeFiles/assimp.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/CMakeFiles --progress-num=34 "Built target OpenGL"
@@ -266,10 +266,10 @@ CMakeFiles/OpenGL.dir/clean:
 # Target rules for target CMakeFiles/Editor.dir
 
 # All Build rule for target.
-CMakeFiles/Editor.dir/all: _deps/assimp-build/code/CMakeFiles/assimp.dir/all
-CMakeFiles/Editor.dir/all: CMakeFiles/Jolt.dir/all
 CMakeFiles/Editor.dir/all: CMakeFiles/imgui.dir/all
+CMakeFiles/Editor.dir/all: CMakeFiles/Jolt.dir/all
 CMakeFiles/Editor.dir/all: CMakeFiles/engine_objects.dir/all
+CMakeFiles/Editor.dir/all: _deps/assimp-build/code/CMakeFiles/assimp.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Editor.dir/build.make CMakeFiles/Editor.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Editor.dir/build.make CMakeFiles/Editor.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/CMakeFiles --progress-num= "Built target Editor"
