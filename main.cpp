@@ -9,6 +9,9 @@
 #include <engine/MeshRenderer.h>
 #include <engine/Texture.h>
 #include <engine/Material.h>
+#include <engine/Procedural.h>
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
 
 int main()
 {
@@ -102,7 +105,108 @@ int main()
     testObject->AddComponent(meshRenderer);
     scene->AddGameObject(testObject);
 
+    // Generate city - wider, less dense
+    CityGenerator* city = new CityGenerator(0.5f);
+    city->Generate(60, 3); // 60 nodes spread over larger area, depth 3 for MANY more roads
+    
+    // Get edge vertices for rendering (main roads)
+    std::vector<float> edgeVertices = city->GetEdgeVertices();
+    
+    // Set up VBO and VAO for city main roads
+    unsigned int cityVAO, cityVBO;
+    glGenVertexArrays(1, &cityVAO);
+    glGenBuffers(1, &cityVBO);
+    
+    glBindVertexArray(cityVAO);
+    glBindBuffer(GL_ARRAY_BUFFER, cityVBO);
+    glBufferData(GL_ARRAY_BUFFER, edgeVertices.size() * sizeof(float), edgeVertices.data(), GL_STATIC_DRAW);
+    
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+    glEnableVertexAttribArray(0);
+    
+    glBindVertexArray(0);
+    
+    // Get alleyway vertices for rendering
+    std::vector<float> alleyVertices = city->GetAlleywayVertices();
+    
+    // Set up VBO and VAO for alleyways
+    unsigned int alleyVAO, alleyVBO;
+    glGenVertexArrays(1, &alleyVAO);
+    glGenBuffers(1, &alleyVBO);
+    
+    glBindVertexArray(alleyVAO);
+    glBindBuffer(GL_ARRAY_BUFFER, alleyVBO);
+    glBufferData(GL_ARRAY_BUFFER, alleyVertices.size() * sizeof(float), alleyVertices.data(), GL_STATIC_DRAW);
+    
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+    glEnableVertexAttribArray(0);
+    
+    glBindVertexArray(0);
+    
+    // Get outskirts vertices for rendering (dead end roads)
+    std::vector<float> outskirtsVertices = city->GetOutskirtsVertices();
+    
+    // Set up VBO and VAO for outskirts
+    unsigned int outskirtsVAO, outskirtsVBO;
+    glGenVertexArrays(1, &outskirtsVAO);
+    glGenBuffers(1, &outskirtsVBO);
+    
+    glBindVertexArray(outskirtsVAO);
+    glBindBuffer(GL_ARRAY_BUFFER, outskirtsVBO);
+    glBufferData(GL_ARRAY_BUFFER, outskirtsVertices.size() * sizeof(float), outskirtsVertices.data(), GL_STATIC_DRAW);
+    
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+    glEnableVertexAttribArray(0);
+    
+    glBindVertexArray(0);
+    
+    // Create city shader with geometry shader
+    Shader* cityShader = new Shader("shaders/city_layout.vs", "shaders/city_layout.fs", "shaders/city_layout.gs");
+    
+    // Set city in scene
+    scene->SetCity(city, cityVAO, cityVBO, static_cast<unsigned int>(edgeVertices.size() / 3), cityShader);
+    scene->SetAlleyways(alleyVAO, alleyVBO, static_cast<unsigned int>(alleyVertices.size() / 3));
+    scene->SetOutskirts(outskirtsVAO, outskirtsVBO, static_cast<unsigned int>(outskirtsVertices.size() / 3));
+    
+    // Get building vertices for rendering
+    std::vector<float> buildingVertices = city->GetBuildingVertices();
+    
+    // Set up VBO and VAO for buildings
+    unsigned int buildingVAO, buildingVBO;
+    glGenVertexArrays(1, &buildingVAO);
+    glGenBuffers(1, &buildingVBO);
+    
+    glBindVertexArray(buildingVAO);
+    glBindBuffer(GL_ARRAY_BUFFER, buildingVBO);
+    glBufferData(GL_ARRAY_BUFFER, buildingVertices.size() * sizeof(float), buildingVertices.data(), GL_STATIC_DRAW);
+    
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+    glEnableVertexAttribArray(0);
+    
+    glBindVertexArray(0);
+    
+    scene->SetBuildings(buildingVAO, buildingVBO, static_cast<unsigned int>(buildingVertices.size() / 3));
+    
+    // Position camera to see the city (city is in -100 to 100 range)
+    // Position camera to see the city
+    scene->mainCamera->SetPosition(glm::vec3(0.0f, 80.0f, 200.0f));
+    scene->mainCamera->SetYaw(-90.0f);
+    scene->mainCamera->SetPitch(-25.0f);
+    scene->mainCamera->ProcessMouseMovement(0.0f, 0.0f, false); // Update camera vectors
+
     renderer.Render(&testShader, scene);
+    
+    // Clean up
+    glDeleteVertexArrays(1, &cityVAO);
+    glDeleteBuffers(1, &cityVBO);
+    glDeleteVertexArrays(1, &alleyVAO);
+    glDeleteBuffers(1, &alleyVBO);
+    glDeleteVertexArrays(1, &outskirtsVAO);
+    glDeleteBuffers(1, &outskirtsVBO);
+    glDeleteVertexArrays(1, &buildingVAO);
+    glDeleteBuffers(1, &buildingVBO);
+    delete city;
+    delete cityShader;
     return 0;
 }
 
