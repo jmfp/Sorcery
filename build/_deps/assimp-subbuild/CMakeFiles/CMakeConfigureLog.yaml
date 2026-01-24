@@ -20,8 +20,6 @@ events:
     names:
       - "uname"
     candidate_directories:
-      - "/Users/jesseprice/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/jesseprice/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
       - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
       - "/opt/homebrew/bin/"
@@ -35,12 +33,11 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/"
       - "/usr/local/share/dotnet/"
       - "/Users/jesseprice/.dotnet/tools/"
     searched_directories:
-      - "/Users/jesseprice/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/uname"
-      - "/Users/jesseprice/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/uname"
       - "/Library/Frameworks/Python.framework/Versions/3.12/bin/uname"
       - "/Library/Frameworks/Python.framework/Versions/3.13/bin/uname"
       - "/opt/homebrew/bin/uname"
@@ -50,8 +47,6 @@ events:
     found: "/usr/bin/uname"
     search_context:
       ENV{PATH}:
-        - "/Users/jesseprice/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
-        - "/Users/jesseprice/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
         - "/opt/homebrew/bin"
@@ -65,11 +60,10 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
         - "/Library/Apple/usr/bin"
         - "/usr/local/share/dotnet"
         - "~/.dotnet/tools"
-        - "/Users/jesseprice/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
-        - "/Users/jesseprice/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
   -
@@ -78,7 +72,7 @@ events:
       - "/opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake:212 (message)"
       - "CMakeLists.txt:16 (project)"
     message: |
-      The system is: Darwin - 25.0.0 - arm64
+      The system is: Darwin - 25.2.0 - arm64
   -
     kind: "find-v1"
     backtrace:
@@ -99,8 +93,6 @@ events:
     names:
       - "install_name_tool"
     candidate_directories:
-      - "/Users/jesseprice/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/Users/jesseprice/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/Library/Frameworks/Python.framework/Versions/3.12/bin/"
       - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
       - "/opt/homebrew/bin/"
@@ -114,12 +106,11 @@ events:
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
       - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/opt/pmk/env/global/bin/"
       - "/Library/Apple/usr/bin/"
       - "/usr/local/share/dotnet/"
       - "/Users/jesseprice/.dotnet/tools/"
     searched_directories:
-      - "/Users/jesseprice/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/install_name_tool"
-      - "/Users/jesseprice/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli/install_name_tool"
       - "/Library/Frameworks/Python.framework/Versions/3.12/bin/install_name_tool"
       - "/Library/Frameworks/Python.framework/Versions/3.13/bin/install_name_tool"
       - "/opt/homebrew/bin/install_name_tool"
@@ -129,8 +120,6 @@ events:
     found: "/usr/bin/install_name_tool"
     search_context:
       ENV{PATH}:
-        - "/Users/jesseprice/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
-        - "/Users/jesseprice/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
         - "/opt/homebrew/bin"
@@ -144,11 +133,10 @@ events:
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
         - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/opt/pmk/env/global/bin"
         - "/Library/Apple/usr/bin"
         - "/usr/local/share/dotnet"
         - "~/.dotnet/tools"
-        - "/Users/jesseprice/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
-        - "/Users/jesseprice/Library/Application Support/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
       CMAKE_INSTALL_PREFIX: "/usr/local"

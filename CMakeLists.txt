@@ -62,7 +62,8 @@ include_directories(
 
 # Source files
 file(GLOB_RECURSE SOURCES
-    "src/*.cpp"
+    "include/engine/*.cpp"
+    "include/*.cpp"
 )
 list(APPEND SOURCES
     main.cpp

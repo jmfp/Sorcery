@@ -251,8 +251,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Jolt.dir/_deps/joltphysics-src/Jolt/TriangleSplitter/TriangleSplitterMean.cpp.o.d"
   "CMakeFiles/Jolt.dir/cmake_pch.hxx.pch"
   "CMakeFiles/Jolt.dir/cmake_pch.hxx.pch.d"
-  "libJolt.dylib"
-  "libJolt.pdb"
+  "libJoltd.dylib"
+  "libJoltd.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

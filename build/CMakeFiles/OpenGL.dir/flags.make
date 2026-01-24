@@ -5,7 +5,7 @@
 # compile CXX with /usr/bin/c++
 C_DEFINES = -DJPH_SHARED_LIBRARY
 
-C_INCLUDES = -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glad -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/GLFW -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/KHR -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-build/code/../include -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/joltphysics-src -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks
+C_INCLUDES = -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glad -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/GLFW -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/KHR -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-build/code/../include -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/joltphysics-src -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks
 
 C_FLAGSarm64 = -g -arch arm64 -pthread
 
@@ -13,7 +13,7 @@ C_FLAGS = -g -arch arm64 -pthread
 
 CXX_DEFINES = -DJPH_SHARED_LIBRARY
 
-CXX_INCLUDES = -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glad -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/GLFW -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/KHR -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-build/code/../include -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/joltphysics-src -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks
+CXX_INCLUDES = -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glad -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/GLFW -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/KHR -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-build/code/../include -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/joltphysics-src -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks
 
 CXX_FLAGSarm64 = -g -std=c++17 -arch arm64 -fvisibility=hidden -pthread
 

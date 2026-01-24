@@ -3215,6 +3215,318 @@ cmake_pch.hxx.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Jolt.dir/build.make CMakeFiles/Jolt.dir/cmake_pch.hxx.s
 .PHONY : cmake_pch.hxx.s
 
+include/engine/Camera.o: include/engine/Camera.cpp.o
+.PHONY : include/engine/Camera.o
+
+# target to build an object file
+include/engine/Camera.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/engine/Camera.cpp.o
+.PHONY : include/engine/Camera.cpp.o
+
+include/engine/Camera.i: include/engine/Camera.cpp.i
+.PHONY : include/engine/Camera.i
+
+# target to preprocess a source file
+include/engine/Camera.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/engine/Camera.cpp.i
+.PHONY : include/engine/Camera.cpp.i
+
+include/engine/Camera.s: include/engine/Camera.cpp.s
+.PHONY : include/engine/Camera.s
+
+# target to generate assembly for a file
+include/engine/Camera.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/engine/Camera.cpp.s
+.PHONY : include/engine/Camera.cpp.s
+
+include/engine/Component.o: include/engine/Component.cpp.o
+.PHONY : include/engine/Component.o
+
+# target to build an object file
+include/engine/Component.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/engine/Component.cpp.o
+.PHONY : include/engine/Component.cpp.o
+
+include/engine/Component.i: include/engine/Component.cpp.i
+.PHONY : include/engine/Component.i
+
+# target to preprocess a source file
+include/engine/Component.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/engine/Component.cpp.i
+.PHONY : include/engine/Component.cpp.i
+
+include/engine/Component.s: include/engine/Component.cpp.s
+.PHONY : include/engine/Component.s
+
+# target to generate assembly for a file
+include/engine/Component.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/engine/Component.cpp.s
+.PHONY : include/engine/Component.cpp.s
+
+include/engine/GameObject.o: include/engine/GameObject.cpp.o
+.PHONY : include/engine/GameObject.o
+
+# target to build an object file
+include/engine/GameObject.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/engine/GameObject.cpp.o
+.PHONY : include/engine/GameObject.cpp.o
+
+include/engine/GameObject.i: include/engine/GameObject.cpp.i
+.PHONY : include/engine/GameObject.i
+
+# target to preprocess a source file
+include/engine/GameObject.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/engine/GameObject.cpp.i
+.PHONY : include/engine/GameObject.cpp.i
+
+include/engine/GameObject.s: include/engine/GameObject.cpp.s
+.PHONY : include/engine/GameObject.s
+
+# target to generate assembly for a file
+include/engine/GameObject.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/engine/GameObject.cpp.s
+.PHONY : include/engine/GameObject.cpp.s
+
+include/engine/Light.o: include/engine/Light.cpp.o
+.PHONY : include/engine/Light.o
+
+# target to build an object file
+include/engine/Light.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/engine/Light.cpp.o
+.PHONY : include/engine/Light.cpp.o
+
+include/engine/Light.i: include/engine/Light.cpp.i
+.PHONY : include/engine/Light.i
+
+# target to preprocess a source file
+include/engine/Light.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/engine/Light.cpp.i
+.PHONY : include/engine/Light.cpp.i
+
+include/engine/Light.s: include/engine/Light.cpp.s
+.PHONY : include/engine/Light.s
+
+# target to generate assembly for a file
+include/engine/Light.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/engine/Light.cpp.s
+.PHONY : include/engine/Light.cpp.s
+
+include/engine/Mesh.o: include/engine/Mesh.cpp.o
+.PHONY : include/engine/Mesh.o
+
+# target to build an object file
+include/engine/Mesh.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/engine/Mesh.cpp.o
+.PHONY : include/engine/Mesh.cpp.o
+
+include/engine/Mesh.i: include/engine/Mesh.cpp.i
+.PHONY : include/engine/Mesh.i
+
+# target to preprocess a source file
+include/engine/Mesh.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/engine/Mesh.cpp.i
+.PHONY : include/engine/Mesh.cpp.i
+
+include/engine/Mesh.s: include/engine/Mesh.cpp.s
+.PHONY : include/engine/Mesh.s
+
+# target to generate assembly for a file
+include/engine/Mesh.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/engine/Mesh.cpp.s
+.PHONY : include/engine/Mesh.cpp.s
+
+include/engine/Model.o: include/engine/Model.cpp.o
+.PHONY : include/engine/Model.o
+
+# target to build an object file
+include/engine/Model.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/engine/Model.cpp.o
+.PHONY : include/engine/Model.cpp.o
+
+include/engine/Model.i: include/engine/Model.cpp.i
+.PHONY : include/engine/Model.i
+
+# target to preprocess a source file
+include/engine/Model.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/engine/Model.cpp.i
+.PHONY : include/engine/Model.cpp.i
+
+include/engine/Model.s: include/engine/Model.cpp.s
+.PHONY : include/engine/Model.s
+
+# target to generate assembly for a file
+include/engine/Model.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/engine/Model.cpp.s
+.PHONY : include/engine/Model.cpp.s
+
+include/engine/Procedural.o: include/engine/Procedural.cpp.o
+.PHONY : include/engine/Procedural.o
+
+# target to build an object file
+include/engine/Procedural.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/engine/Procedural.cpp.o
+.PHONY : include/engine/Procedural.cpp.o
+
+include/engine/Procedural.i: include/engine/Procedural.cpp.i
+.PHONY : include/engine/Procedural.i
+
+# target to preprocess a source file
+include/engine/Procedural.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/engine/Procedural.cpp.i
+.PHONY : include/engine/Procedural.cpp.i
+
+include/engine/Procedural.s: include/engine/Procedural.cpp.s
+.PHONY : include/engine/Procedural.s
+
+# target to generate assembly for a file
+include/engine/Procedural.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/engine/Procedural.cpp.s
+.PHONY : include/engine/Procedural.cpp.s
+
+include/engine/Renderer.o: include/engine/Renderer.cpp.o
+.PHONY : include/engine/Renderer.o
+
+# target to build an object file
+include/engine/Renderer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/engine/Renderer.cpp.o
+.PHONY : include/engine/Renderer.cpp.o
+
+include/engine/Renderer.i: include/engine/Renderer.cpp.i
+.PHONY : include/engine/Renderer.i
+
+# target to preprocess a source file
+include/engine/Renderer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/engine/Renderer.cpp.i
+.PHONY : include/engine/Renderer.cpp.i
+
+include/engine/Renderer.s: include/engine/Renderer.cpp.s
+.PHONY : include/engine/Renderer.s
+
+# target to generate assembly for a file
+include/engine/Renderer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/engine/Renderer.cpp.s
+.PHONY : include/engine/Renderer.cpp.s
+
+include/engine/Scene.o: include/engine/Scene.cpp.o
+.PHONY : include/engine/Scene.o
+
+# target to build an object file
+include/engine/Scene.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/engine/Scene.cpp.o
+.PHONY : include/engine/Scene.cpp.o
+
+include/engine/Scene.i: include/engine/Scene.cpp.i
+.PHONY : include/engine/Scene.i
+
+# target to preprocess a source file
+include/engine/Scene.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/engine/Scene.cpp.i
+.PHONY : include/engine/Scene.cpp.i
+
+include/engine/Scene.s: include/engine/Scene.cpp.s
+.PHONY : include/engine/Scene.s
+
+# target to generate assembly for a file
+include/engine/Scene.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/engine/Scene.cpp.s
+.PHONY : include/engine/Scene.cpp.s
+
+include/engine/Shader.o: include/engine/Shader.cpp.o
+.PHONY : include/engine/Shader.o
+
+# target to build an object file
+include/engine/Shader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/engine/Shader.cpp.o
+.PHONY : include/engine/Shader.cpp.o
+
+include/engine/Shader.i: include/engine/Shader.cpp.i
+.PHONY : include/engine/Shader.i
+
+# target to preprocess a source file
+include/engine/Shader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/engine/Shader.cpp.i
+.PHONY : include/engine/Shader.cpp.i
+
+include/engine/Shader.s: include/engine/Shader.cpp.s
+.PHONY : include/engine/Shader.s
+
+# target to generate assembly for a file
+include/engine/Shader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/engine/Shader.cpp.s
+.PHONY : include/engine/Shader.cpp.s
+
+include/engine/Texture.o: include/engine/Texture.cpp.o
+.PHONY : include/engine/Texture.o
+
+# target to build an object file
+include/engine/Texture.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/engine/Texture.cpp.o
+.PHONY : include/engine/Texture.cpp.o
+
+include/engine/Texture.i: include/engine/Texture.cpp.i
+.PHONY : include/engine/Texture.i
+
+# target to preprocess a source file
+include/engine/Texture.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/engine/Texture.cpp.i
+.PHONY : include/engine/Texture.cpp.i
+
+include/engine/Texture.s: include/engine/Texture.cpp.s
+.PHONY : include/engine/Texture.s
+
+# target to generate assembly for a file
+include/engine/Texture.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/engine/Texture.cpp.s
+.PHONY : include/engine/Texture.cpp.s
+
+include/engine/Transform.o: include/engine/Transform.cpp.o
+.PHONY : include/engine/Transform.o
+
+# target to build an object file
+include/engine/Transform.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/engine/Transform.cpp.o
+.PHONY : include/engine/Transform.cpp.o
+
+include/engine/Transform.i: include/engine/Transform.cpp.i
+.PHONY : include/engine/Transform.i
+
+# target to preprocess a source file
+include/engine/Transform.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/engine/Transform.cpp.i
+.PHONY : include/engine/Transform.cpp.i
+
+include/engine/Transform.s: include/engine/Transform.cpp.s
+.PHONY : include/engine/Transform.s
+
+# target to generate assembly for a file
+include/engine/Transform.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/engine/Transform.cpp.s
+.PHONY : include/engine/Transform.cpp.s
+
+include/engine/Window.o: include/engine/Window.cpp.o
+.PHONY : include/engine/Window.o
+
+# target to build an object file
+include/engine/Window.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/engine/Window.cpp.o
+.PHONY : include/engine/Window.cpp.o
+
+include/engine/Window.i: include/engine/Window.cpp.i
+.PHONY : include/engine/Window.i
+
+# target to preprocess a source file
+include/engine/Window.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/engine/Window.cpp.i
+.PHONY : include/engine/Window.cpp.i
+
+include/engine/Window.s: include/engine/Window.cpp.s
+.PHONY : include/engine/Window.s
+
+# target to generate assembly for a file
+include/engine/Window.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/engine/Window.cpp.s
+.PHONY : include/engine/Window.cpp.s
+
 include/glad/glad.o: include/glad/glad.c.o
 .PHONY : include/glad/glad.o
 
@@ -3239,6 +3551,54 @@ include/glad/glad.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/glad/glad.c.s
 .PHONY : include/glad/glad.c.s
 
+include/glm/detail/glm.o: include/glm/detail/glm.cpp.o
+.PHONY : include/glm/detail/glm.o
+
+# target to build an object file
+include/glm/detail/glm.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/glm/detail/glm.cpp.o
+.PHONY : include/glm/detail/glm.cpp.o
+
+include/glm/detail/glm.i: include/glm/detail/glm.cpp.i
+.PHONY : include/glm/detail/glm.i
+
+# target to preprocess a source file
+include/glm/detail/glm.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/glm/detail/glm.cpp.i
+.PHONY : include/glm/detail/glm.cpp.i
+
+include/glm/detail/glm.s: include/glm/detail/glm.cpp.s
+.PHONY : include/glm/detail/glm.s
+
+# target to generate assembly for a file
+include/glm/detail/glm.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/glm/detail/glm.cpp.s
+.PHONY : include/glm/detail/glm.cpp.s
+
+include/stb_image.o: include/stb_image.cpp.o
+.PHONY : include/stb_image.o
+
+# target to build an object file
+include/stb_image.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/stb_image.cpp.o
+.PHONY : include/stb_image.cpp.o
+
+include/stb_image.i: include/stb_image.cpp.i
+.PHONY : include/stb_image.i
+
+# target to preprocess a source file
+include/stb_image.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/stb_image.cpp.i
+.PHONY : include/stb_image.cpp.i
+
+include/stb_image.s: include/stb_image.cpp.s
+.PHONY : include/stb_image.s
+
+# target to generate assembly for a file
+include/stb_image.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/stb_image.cpp.s
+.PHONY : include/stb_image.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -3262,342 +3622,6 @@ main.s: main.cpp.s
 main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/main.cpp.s
 .PHONY : main.cpp.s
-
-src/Camera.o: src/Camera.cpp.o
-.PHONY : src/Camera.o
-
-# target to build an object file
-src/Camera.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Camera.cpp.o
-.PHONY : src/Camera.cpp.o
-
-src/Camera.i: src/Camera.cpp.i
-.PHONY : src/Camera.i
-
-# target to preprocess a source file
-src/Camera.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Camera.cpp.i
-.PHONY : src/Camera.cpp.i
-
-src/Camera.s: src/Camera.cpp.s
-.PHONY : src/Camera.s
-
-# target to generate assembly for a file
-src/Camera.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Camera.cpp.s
-.PHONY : src/Camera.cpp.s
-
-src/Component.o: src/Component.cpp.o
-.PHONY : src/Component.o
-
-# target to build an object file
-src/Component.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Component.cpp.o
-.PHONY : src/Component.cpp.o
-
-src/Component.i: src/Component.cpp.i
-.PHONY : src/Component.i
-
-# target to preprocess a source file
-src/Component.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Component.cpp.i
-.PHONY : src/Component.cpp.i
-
-src/Component.s: src/Component.cpp.s
-.PHONY : src/Component.s
-
-# target to generate assembly for a file
-src/Component.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Component.cpp.s
-.PHONY : src/Component.cpp.s
-
-src/GameObject.o: src/GameObject.cpp.o
-.PHONY : src/GameObject.o
-
-# target to build an object file
-src/GameObject.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/GameObject.cpp.o
-.PHONY : src/GameObject.cpp.o
-
-src/GameObject.i: src/GameObject.cpp.i
-.PHONY : src/GameObject.i
-
-# target to preprocess a source file
-src/GameObject.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/GameObject.cpp.i
-.PHONY : src/GameObject.cpp.i
-
-src/GameObject.s: src/GameObject.cpp.s
-.PHONY : src/GameObject.s
-
-# target to generate assembly for a file
-src/GameObject.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/GameObject.cpp.s
-.PHONY : src/GameObject.cpp.s
-
-src/Light.o: src/Light.cpp.o
-.PHONY : src/Light.o
-
-# target to build an object file
-src/Light.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Light.cpp.o
-.PHONY : src/Light.cpp.o
-
-src/Light.i: src/Light.cpp.i
-.PHONY : src/Light.i
-
-# target to preprocess a source file
-src/Light.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Light.cpp.i
-.PHONY : src/Light.cpp.i
-
-src/Light.s: src/Light.cpp.s
-.PHONY : src/Light.s
-
-# target to generate assembly for a file
-src/Light.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Light.cpp.s
-.PHONY : src/Light.cpp.s
-
-src/Mesh.o: src/Mesh.cpp.o
-.PHONY : src/Mesh.o
-
-# target to build an object file
-src/Mesh.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Mesh.cpp.o
-.PHONY : src/Mesh.cpp.o
-
-src/Mesh.i: src/Mesh.cpp.i
-.PHONY : src/Mesh.i
-
-# target to preprocess a source file
-src/Mesh.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Mesh.cpp.i
-.PHONY : src/Mesh.cpp.i
-
-src/Mesh.s: src/Mesh.cpp.s
-.PHONY : src/Mesh.s
-
-# target to generate assembly for a file
-src/Mesh.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Mesh.cpp.s
-.PHONY : src/Mesh.cpp.s
-
-src/Model.o: src/Model.cpp.o
-.PHONY : src/Model.o
-
-# target to build an object file
-src/Model.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Model.cpp.o
-.PHONY : src/Model.cpp.o
-
-src/Model.i: src/Model.cpp.i
-.PHONY : src/Model.i
-
-# target to preprocess a source file
-src/Model.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Model.cpp.i
-.PHONY : src/Model.cpp.i
-
-src/Model.s: src/Model.cpp.s
-.PHONY : src/Model.s
-
-# target to generate assembly for a file
-src/Model.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Model.cpp.s
-.PHONY : src/Model.cpp.s
-
-src/Procedural.o: src/Procedural.cpp.o
-.PHONY : src/Procedural.o
-
-# target to build an object file
-src/Procedural.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Procedural.cpp.o
-.PHONY : src/Procedural.cpp.o
-
-src/Procedural.i: src/Procedural.cpp.i
-.PHONY : src/Procedural.i
-
-# target to preprocess a source file
-src/Procedural.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Procedural.cpp.i
-.PHONY : src/Procedural.cpp.i
-
-src/Procedural.s: src/Procedural.cpp.s
-.PHONY : src/Procedural.s
-
-# target to generate assembly for a file
-src/Procedural.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Procedural.cpp.s
-.PHONY : src/Procedural.cpp.s
-
-src/Renderer.o: src/Renderer.cpp.o
-.PHONY : src/Renderer.o
-
-# target to build an object file
-src/Renderer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Renderer.cpp.o
-.PHONY : src/Renderer.cpp.o
-
-src/Renderer.i: src/Renderer.cpp.i
-.PHONY : src/Renderer.i
-
-# target to preprocess a source file
-src/Renderer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Renderer.cpp.i
-.PHONY : src/Renderer.cpp.i
-
-src/Renderer.s: src/Renderer.cpp.s
-.PHONY : src/Renderer.s
-
-# target to generate assembly for a file
-src/Renderer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Renderer.cpp.s
-.PHONY : src/Renderer.cpp.s
-
-src/Scene.o: src/Scene.cpp.o
-.PHONY : src/Scene.o
-
-# target to build an object file
-src/Scene.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Scene.cpp.o
-.PHONY : src/Scene.cpp.o
-
-src/Scene.i: src/Scene.cpp.i
-.PHONY : src/Scene.i
-
-# target to preprocess a source file
-src/Scene.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Scene.cpp.i
-.PHONY : src/Scene.cpp.i
-
-src/Scene.s: src/Scene.cpp.s
-.PHONY : src/Scene.s
-
-# target to generate assembly for a file
-src/Scene.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Scene.cpp.s
-.PHONY : src/Scene.cpp.s
-
-src/Shader.o: src/Shader.cpp.o
-.PHONY : src/Shader.o
-
-# target to build an object file
-src/Shader.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Shader.cpp.o
-.PHONY : src/Shader.cpp.o
-
-src/Shader.i: src/Shader.cpp.i
-.PHONY : src/Shader.i
-
-# target to preprocess a source file
-src/Shader.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Shader.cpp.i
-.PHONY : src/Shader.cpp.i
-
-src/Shader.s: src/Shader.cpp.s
-.PHONY : src/Shader.s
-
-# target to generate assembly for a file
-src/Shader.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Shader.cpp.s
-.PHONY : src/Shader.cpp.s
-
-src/Texture.o: src/Texture.cpp.o
-.PHONY : src/Texture.o
-
-# target to build an object file
-src/Texture.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Texture.cpp.o
-.PHONY : src/Texture.cpp.o
-
-src/Texture.i: src/Texture.cpp.i
-.PHONY : src/Texture.i
-
-# target to preprocess a source file
-src/Texture.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Texture.cpp.i
-.PHONY : src/Texture.cpp.i
-
-src/Texture.s: src/Texture.cpp.s
-.PHONY : src/Texture.s
-
-# target to generate assembly for a file
-src/Texture.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Texture.cpp.s
-.PHONY : src/Texture.cpp.s
-
-src/Transform.o: src/Transform.cpp.o
-.PHONY : src/Transform.o
-
-# target to build an object file
-src/Transform.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Transform.cpp.o
-.PHONY : src/Transform.cpp.o
-
-src/Transform.i: src/Transform.cpp.i
-.PHONY : src/Transform.i
-
-# target to preprocess a source file
-src/Transform.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Transform.cpp.i
-.PHONY : src/Transform.cpp.i
-
-src/Transform.s: src/Transform.cpp.s
-.PHONY : src/Transform.s
-
-# target to generate assembly for a file
-src/Transform.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Transform.cpp.s
-.PHONY : src/Transform.cpp.s
-
-src/Window.o: src/Window.cpp.o
-.PHONY : src/Window.o
-
-# target to build an object file
-src/Window.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Window.cpp.o
-.PHONY : src/Window.cpp.o
-
-src/Window.i: src/Window.cpp.i
-.PHONY : src/Window.i
-
-# target to preprocess a source file
-src/Window.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Window.cpp.i
-.PHONY : src/Window.cpp.i
-
-src/Window.s: src/Window.cpp.s
-.PHONY : src/Window.s
-
-# target to generate assembly for a file
-src/Window.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/Window.cpp.s
-.PHONY : src/Window.cpp.s
-
-src/stb_image.o: src/stb_image.cpp.o
-.PHONY : src/stb_image.o
-
-# target to build an object file
-src/stb_image.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/stb_image.cpp.o
-.PHONY : src/stb_image.cpp.o
-
-src/stb_image.i: src/stb_image.cpp.i
-.PHONY : src/stb_image.i
-
-# target to preprocess a source file
-src/stb_image.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/stb_image.cpp.i
-.PHONY : src/stb_image.cpp.i
-
-src/stb_image.s: src/stb_image.cpp.s
-.PHONY : src/stb_image.s
-
-# target to generate assembly for a file
-src/stb_image.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/src/stb_image.cpp.s
-.PHONY : src/stb_image.cpp.s
 
 # Help Target
 help:
@@ -3992,54 +4016,57 @@ help:
 	@echo "... cmake_pch.hxx.pch"
 	@echo "... cmake_pch.hxx.i"
 	@echo "... cmake_pch.hxx.s"
+	@echo "... include/engine/Camera.o"
+	@echo "... include/engine/Camera.i"
+	@echo "... include/engine/Camera.s"
+	@echo "... include/engine/Component.o"
+	@echo "... include/engine/Component.i"
+	@echo "... include/engine/Component.s"
+	@echo "... include/engine/GameObject.o"
+	@echo "... include/engine/GameObject.i"
+	@echo "... include/engine/GameObject.s"
+	@echo "... include/engine/Light.o"
+	@echo "... include/engine/Light.i"
+	@echo "... include/engine/Light.s"
+	@echo "... include/engine/Mesh.o"
+	@echo "... include/engine/Mesh.i"
+	@echo "... include/engine/Mesh.s"
+	@echo "... include/engine/Model.o"
+	@echo "... include/engine/Model.i"
+	@echo "... include/engine/Model.s"
+	@echo "... include/engine/Procedural.o"
+	@echo "... include/engine/Procedural.i"
+	@echo "... include/engine/Procedural.s"
+	@echo "... include/engine/Renderer.o"
+	@echo "... include/engine/Renderer.i"
+	@echo "... include/engine/Renderer.s"
+	@echo "... include/engine/Scene.o"
+	@echo "... include/engine/Scene.i"
+	@echo "... include/engine/Scene.s"
+	@echo "... include/engine/Shader.o"
+	@echo "... include/engine/Shader.i"
+	@echo "... include/engine/Shader.s"
+	@echo "... include/engine/Texture.o"
+	@echo "... include/engine/Texture.i"
+	@echo "... include/engine/Texture.s"
+	@echo "... include/engine/Transform.o"
+	@echo "... include/engine/Transform.i"
+	@echo "... include/engine/Transform.s"
+	@echo "... include/engine/Window.o"
+	@echo "... include/engine/Window.i"
+	@echo "... include/engine/Window.s"
 	@echo "... include/glad/glad.o"
 	@echo "... include/glad/glad.i"
 	@echo "... include/glad/glad.s"
+	@echo "... include/glm/detail/glm.o"
+	@echo "... include/glm/detail/glm.i"
+	@echo "... include/glm/detail/glm.s"
+	@echo "... include/stb_image.o"
+	@echo "... include/stb_image.i"
+	@echo "... include/stb_image.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... src/Camera.o"
-	@echo "... src/Camera.i"
-	@echo "... src/Camera.s"
-	@echo "... src/Component.o"
-	@echo "... src/Component.i"
-	@echo "... src/Component.s"
-	@echo "... src/GameObject.o"
-	@echo "... src/GameObject.i"
-	@echo "... src/GameObject.s"
-	@echo "... src/Light.o"
-	@echo "... src/Light.i"
-	@echo "... src/Light.s"
-	@echo "... src/Mesh.o"
-	@echo "... src/Mesh.i"
-	@echo "... src/Mesh.s"
-	@echo "... src/Model.o"
-	@echo "... src/Model.i"
-	@echo "... src/Model.s"
-	@echo "... src/Procedural.o"
-	@echo "... src/Procedural.i"
-	@echo "... src/Procedural.s"
-	@echo "... src/Renderer.o"
-	@echo "... src/Renderer.i"
-	@echo "... src/Renderer.s"
-	@echo "... src/Scene.o"
-	@echo "... src/Scene.i"
-	@echo "... src/Scene.s"
-	@echo "... src/Shader.o"
-	@echo "... src/Shader.i"
-	@echo "... src/Shader.s"
-	@echo "... src/Texture.o"
-	@echo "... src/Texture.i"
-	@echo "... src/Texture.s"
-	@echo "... src/Transform.o"
-	@echo "... src/Transform.i"
-	@echo "... src/Transform.s"
-	@echo "... src/Window.o"
-	@echo "... src/Window.i"
-	@echo "... src/Window.s"
-	@echo "... src/stb_image.o"
-	@echo "... src/stb_image.i"
-	@echo "... src/stb_image.s"
 .PHONY : help
 
 
