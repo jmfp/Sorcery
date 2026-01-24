@@ -9,6 +9,7 @@
 #include <engine/MeshRenderer.h>
 #include <engine/Texture.h>
 #include <engine/Material.h>
+#include <engine/AutoRotate.h>
 
 int main()
 {
@@ -63,11 +64,12 @@ int main()
     };
     // Initialize GLFW
     Window* window = new Window();
-    window->Initialize("Witch In The Woods", 1920, 1080);
+    window->Initialize("Sorcery Engine", 1920, 1080);
     Shader testShader = Shader("shaders/point_light.vs", "shaders/lighting.fs");
     Renderer3D renderer = Renderer3D(window);
     Scene* scene = new Scene("Test Scene", window);
     GameObject* testObject = new GameObject();
+    testObject->GetTransform()->SetRotation(glm::vec3(10.0f, 10.0f, 10.0f));
     Texture diffuseTexture = Texture("../src/textures/container2.png", 512, 512, TextureType::DIFFUSE);
     Texture specularTexture = Texture("../src/textures/specular.png", 512, 512, TextureType::SPECULAR);
     Texture emissionTexture = Texture("../src/textures/emission.jpg", 512, 512, TextureType::EMISSION);
@@ -100,6 +102,8 @@ int main()
     MeshRenderer* meshRenderer = new MeshRenderer(cubeMesh, material);
     testObject->GetTransform()->SetPosition(glm::vec3(0.0f, 0.0f, 0.0f));
     testObject->AddComponent(meshRenderer);
+    AutoRotate* autoRotate = new AutoRotate(testObject->GetTransform(), 5.0f, Axis::Y);
+    testObject->AddComponent(autoRotate);
     scene->AddGameObject(testObject);
 
     renderer.Render(&testShader, scene);

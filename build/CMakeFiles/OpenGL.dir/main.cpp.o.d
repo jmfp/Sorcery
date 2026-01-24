@@ -1122,4 +1122,5 @@ CMakeFiles/OpenGL.dir/main.cpp.o: \
   /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Math.h \
   /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Texture.h \
   /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/stb_image.h \
-  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Material.h
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Material.h \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/AutoRotate.h

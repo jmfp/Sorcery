@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/OpenGL.dir/include/engine/AutoRotate.cpp.o"
+  "CMakeFiles/OpenGL.dir/include/engine/AutoRotate.cpp.o.d"
   "CMakeFiles/OpenGL.dir/include/engine/Camera.cpp.o"
   "CMakeFiles/OpenGL.dir/include/engine/Camera.cpp.o.d"
   "CMakeFiles/OpenGL.dir/include/engine/Component.cpp.o"

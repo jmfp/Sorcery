@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glad/glad.c" "CMakeFiles/OpenGL.dir/include/glad/glad.c.o" "gcc" "CMakeFiles/OpenGL.dir/include/glad/glad.c.o.d"
+  "/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/AutoRotate.cpp" "CMakeFiles/OpenGL.dir/include/engine/AutoRotate.cpp.o" "gcc" "CMakeFiles/OpenGL.dir/include/engine/AutoRotate.cpp.o.d"
   "/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Camera.cpp" "CMakeFiles/OpenGL.dir/include/engine/Camera.cpp.o" "gcc" "CMakeFiles/OpenGL.dir/include/engine/Camera.cpp.o.d"
   "/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Component.cpp" "CMakeFiles/OpenGL.dir/include/engine/Component.cpp.o" "gcc" "CMakeFiles/OpenGL.dir/include/engine/Component.cpp.o.d"
   "/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/GameObject.cpp" "CMakeFiles/OpenGL.dir/include/engine/GameObject.cpp.o" "gcc" "CMakeFiles/OpenGL.dir/include/engine/GameObject.cpp.o.d"

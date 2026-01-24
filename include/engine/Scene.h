@@ -16,6 +16,10 @@ class Scene{
         // void RemoveGameObject(GameObject* gameObject){gameObjects.pop_back();};
         void Update(float deltaTime);
         virtual void Draw(){
+            static float lastFrame = 0.0f;
+            float currentFrame = glfwGetTime();
+            float deltaTime = currentFrame - lastFrame;
+            lastFrame = currentFrame;
             if (!defaultShader || !mainCamera){
                 std::cerr << "Scene Draw Error: Missing default shader or main camera." << std::endl;
                 return;
@@ -46,8 +50,10 @@ class Scene{
             
             for(auto& gameObject : gameObjects){
                 gameObject->Draw(defaultShader);
+                gameObject->Update(deltaTime);
             };
         }
+        std::vector<GameObject*> GetGameObjects(){return gameObjects;}
         Camera* mainCamera = new Camera();
         LightManager* lightManager = new LightManager();
     protected:

@@ -3,6 +3,7 @@
 class GameObject;
 class Shader;
 
+// Drawable interface
 class Drawable {
     public:
         virtual void Draw(Shader* shader) = 0;

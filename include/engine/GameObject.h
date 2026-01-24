@@ -31,6 +31,11 @@ class GameObject{
                 }
             }
         };
+        void Update(float deltaTime){
+            for (auto* component : components) {
+                component->Update(deltaTime);
+            }
+        };
         unsigned int id;
         Transform* GetTransform(){
             return transform;

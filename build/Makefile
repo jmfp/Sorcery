@@ -3215,6 +3215,30 @@ cmake_pch.hxx.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Jolt.dir/build.make CMakeFiles/Jolt.dir/cmake_pch.hxx.s
 .PHONY : cmake_pch.hxx.s
 
+include/engine/AutoRotate.o: include/engine/AutoRotate.cpp.o
+.PHONY : include/engine/AutoRotate.o
+
+# target to build an object file
+include/engine/AutoRotate.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/engine/AutoRotate.cpp.o
+.PHONY : include/engine/AutoRotate.cpp.o
+
+include/engine/AutoRotate.i: include/engine/AutoRotate.cpp.i
+.PHONY : include/engine/AutoRotate.i
+
+# target to preprocess a source file
+include/engine/AutoRotate.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/engine/AutoRotate.cpp.i
+.PHONY : include/engine/AutoRotate.cpp.i
+
+include/engine/AutoRotate.s: include/engine/AutoRotate.cpp.s
+.PHONY : include/engine/AutoRotate.s
+
+# target to generate assembly for a file
+include/engine/AutoRotate.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/engine/AutoRotate.cpp.s
+.PHONY : include/engine/AutoRotate.cpp.s
+
 include/engine/Camera.o: include/engine/Camera.cpp.o
 .PHONY : include/engine/Camera.o
 
@@ -4016,6 +4040,9 @@ help:
 	@echo "... cmake_pch.hxx.pch"
 	@echo "... cmake_pch.hxx.i"
 	@echo "... cmake_pch.hxx.s"
+	@echo "... include/engine/AutoRotate.o"
+	@echo "... include/engine/AutoRotate.i"
+	@echo "... include/engine/AutoRotate.s"
 	@echo "... include/engine/Camera.o"
 	@echo "... include/engine/Camera.i"
 	@echo "... include/engine/Camera.s"
