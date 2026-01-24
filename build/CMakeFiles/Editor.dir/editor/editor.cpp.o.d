@@ -1121,4 +1121,39 @@ CMakeFiles/Editor.dir/editor/editor.cpp.o: \
   /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Component.h \
   /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Transform.h \
   /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/gtc/matrix_transform.hpp \
-  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Light.h
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Light.h \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Model.h \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Mesh.h \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Math.h \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Texture.h \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/stb_image.h \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include/assimp/scene.h \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include/assimp/types.h \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include/assimp/defs.h \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-build/code/../include/assimp/config.h \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include/assimp/vector2.h \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include/assimp/vector3.h \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include/assimp/color4.h \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include/assimp/matrix3x3.h \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include/assimp/matrix4x4.h \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include/assimp/quaternion.h \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include/assimp/vector2.inl \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include/assimp/vector3.inl \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include/assimp/color4.inl \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include/assimp/matrix3x3.inl \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include/assimp/matrix4x4.inl \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include/assimp/MathFunctions.h \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include/assimp/quaternion.inl \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include/assimp/texture.h \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include/assimp/./Compiler/pushpack1.h \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include/assimp/./Compiler/poppack1.h \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include/assimp/mesh.h \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include/assimp/aabb.h \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include/assimp/light.h \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include/assimp/camera.h \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include/assimp/material.h \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include/assimp/material.inl \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include/assimp/anim.h \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include/assimp/metadata.h \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include/assimp/Importer.hpp \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include/assimp/postprocess.h

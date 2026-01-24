@@ -804,6 +804,36 @@ CMakeFiles/Editor.dir/editor/editor.cpp.o
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/stdarg.h
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/stddef.h
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/stdint.h
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-build/include/assimp/config.h
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/include/assimp/Compiler/poppack1.h
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/include/assimp/Compiler/pushpack1.h
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/include/assimp/Importer.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/include/assimp/MathFunctions.h
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/include/assimp/aabb.h
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/include/assimp/anim.h
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/include/assimp/camera.h
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/include/assimp/color4.h
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/include/assimp/color4.inl
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/include/assimp/defs.h
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/include/assimp/light.h
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/include/assimp/material.h
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/include/assimp/material.inl
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/include/assimp/matrix3x3.h
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/include/assimp/matrix3x3.inl
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/include/assimp/matrix4x4.h
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/include/assimp/matrix4x4.inl
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/include/assimp/mesh.h
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/include/assimp/metadata.h
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/include/assimp/postprocess.h
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/include/assimp/quaternion.h
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/include/assimp/quaternion.inl
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/include/assimp/scene.h
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/include/assimp/texture.h
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/include/assimp/types.h
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/include/assimp/vector2.h
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/include/assimp/vector2.inl
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/include/assimp/vector3.h
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/include/assimp/vector3.inl
  /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/imgui-src/backends/imgui_impl_glfw.h
  /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/imgui-src/backends/imgui_impl_opengl3.h
  /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/imgui-src/imconfig.h
@@ -814,9 +844,13 @@ CMakeFiles/Editor.dir/editor/editor.cpp.o
  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Component.h
  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/GameObject.h
  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Light.h
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Math.h
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Mesh.h
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Model.h
  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Renderer.h
  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Scene.h
  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Shader.h
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Texture.h
  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Transform.h
  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Window.h
  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glad/glad.h
@@ -1125,4 +1159,5 @@ CMakeFiles/Editor.dir/editor/editor.cpp.o
  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/vec3.hpp
  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/vec4.hpp
  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/vector_relational.hpp
+ /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/stb_image.h
 

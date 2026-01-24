@@ -7,6 +7,7 @@
 #include <engine/Shader.h>
 #include <engine/Renderer.h>
 #include <engine/Scene.h>
+#include <engine/Model.h>
 // ... other engine includes
 
 int main()
@@ -57,6 +58,12 @@ int main()
     // Your engine setup (Scene, Renderer, etc.)
     Renderer3D renderer = Renderer3D(window);
     Scene* scene = new Scene("Editor Scene", window);
+
+    char modelPath[] = "../src/models/backpack/backpack.obj";
+    Model* model = new Model(modelPath);
+    model->SetCamera(scene->mainCamera);
+    Shader modelShader = Shader("shaders/mesh.vs", "shaders/mesh.fs");
+    model->SetShader(modelShader);
     
     // Main loop
     while (!glfwWindowShouldClose(window->GetWindow()))
@@ -91,7 +98,12 @@ int main()
             glViewport(0, 0, (int)viewportSize.x, (int)viewportSize.y);
             glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+            
+            // Render scene GameObjects
             scene->Draw();
+            
+            // Render Model directly (Model doesn't use component system)
+            model->Draw(modelShader);
 
             // Unbind framebuffer
             glBindFramebuffer(GL_FRAMEBUFFER, 0);

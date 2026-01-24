@@ -803,6 +803,36 @@ CMakeFiles/Editor.dir/editor/editor.cpp.o: /Users/jesseprice/Development/Persona
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/stdarg.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/stdint.h \
+  _deps/assimp-build/include/assimp/config.h \
+  _deps/assimp-src/include/assimp/Compiler/poppack1.h \
+  _deps/assimp-src/include/assimp/Compiler/pushpack1.h \
+  _deps/assimp-src/include/assimp/Importer.hpp \
+  _deps/assimp-src/include/assimp/MathFunctions.h \
+  _deps/assimp-src/include/assimp/aabb.h \
+  _deps/assimp-src/include/assimp/anim.h \
+  _deps/assimp-src/include/assimp/camera.h \
+  _deps/assimp-src/include/assimp/color4.h \
+  _deps/assimp-src/include/assimp/color4.inl \
+  _deps/assimp-src/include/assimp/defs.h \
+  _deps/assimp-src/include/assimp/light.h \
+  _deps/assimp-src/include/assimp/material.h \
+  _deps/assimp-src/include/assimp/material.inl \
+  _deps/assimp-src/include/assimp/matrix3x3.h \
+  _deps/assimp-src/include/assimp/matrix3x3.inl \
+  _deps/assimp-src/include/assimp/matrix4x4.h \
+  _deps/assimp-src/include/assimp/matrix4x4.inl \
+  _deps/assimp-src/include/assimp/mesh.h \
+  _deps/assimp-src/include/assimp/metadata.h \
+  _deps/assimp-src/include/assimp/postprocess.h \
+  _deps/assimp-src/include/assimp/quaternion.h \
+  _deps/assimp-src/include/assimp/quaternion.inl \
+  _deps/assimp-src/include/assimp/scene.h \
+  _deps/assimp-src/include/assimp/texture.h \
+  _deps/assimp-src/include/assimp/types.h \
+  _deps/assimp-src/include/assimp/vector2.h \
+  _deps/assimp-src/include/assimp/vector2.inl \
+  _deps/assimp-src/include/assimp/vector3.h \
+  _deps/assimp-src/include/assimp/vector3.inl \
   _deps/imgui-src/backends/imgui_impl_glfw.h \
   _deps/imgui-src/backends/imgui_impl_opengl3.h \
   _deps/imgui-src/imconfig.h \
@@ -813,9 +843,13 @@ CMakeFiles/Editor.dir/editor/editor.cpp.o: /Users/jesseprice/Development/Persona
   /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Component.h \
   /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/GameObject.h \
   /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Light.h \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Math.h \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Mesh.h \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Model.h \
   /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Renderer.h \
   /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Scene.h \
   /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Shader.h \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Texture.h \
   /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Transform.h \
   /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Window.h \
   /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glad/glad.h \
@@ -1123,8 +1157,11 @@ CMakeFiles/Editor.dir/editor/editor.cpp.o: /Users/jesseprice/Development/Persona
   /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/vec2.hpp \
   /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/vec3.hpp \
   /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/vec4.hpp \
-  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/vector_relational.hpp
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/vector_relational.hpp \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/stb_image.h
 
+
+/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/stb_image.h:
 
 /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/integer.hpp:
 
@@ -1350,6 +1387,10 @@ CMakeFiles/Editor.dir/editor/editor.cpp.o: /Users/jesseprice/Development/Persona
 
 /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Renderer.h:
 
+/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Model.h:
+
+/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Mesh.h:
+
 /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Light.h:
 
 /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Component.h:
@@ -1365,6 +1406,42 @@ CMakeFiles/Editor.dir/editor/editor.cpp.o: /Users/jesseprice/Development/Persona
 _deps/imgui-src/backends/imgui_impl_opengl3.h:
 
 _deps/imgui-src/backends/imgui_impl_glfw.h:
+
+_deps/assimp-src/include/assimp/vector3.inl:
+
+_deps/assimp-src/include/assimp/vector2.h:
+
+_deps/assimp-src/include/assimp/types.h:
+
+_deps/assimp-src/include/assimp/texture.h:
+
+_deps/assimp-src/include/assimp/quaternion.inl:
+
+_deps/assimp-src/include/assimp/quaternion.h:
+
+_deps/assimp-src/include/assimp/postprocess.h:
+
+_deps/assimp-src/include/assimp/matrix4x4.h:
+
+_deps/assimp-src/include/assimp/matrix3x3.inl:
+
+_deps/assimp-src/include/assimp/matrix3x3.h:
+
+_deps/assimp-src/include/assimp/light.h:
+
+_deps/assimp-src/include/assimp/color4.inl:
+
+_deps/assimp-src/include/assimp/anim.h:
+
+_deps/assimp-src/include/assimp/aabb.h:
+
+_deps/assimp-src/include/assimp/Importer.hpp:
+
+_deps/assimp-src/include/assimp/defs.h:
+
+_deps/assimp-src/include/assimp/Compiler/pushpack1.h:
+
+_deps/assimp-build/include/assimp/config.h:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/stdint.h:
 
@@ -1582,6 +1659,8 @@ _deps/imgui-src/backends/imgui_impl_glfw.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/stdlib.h:
 
+/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Texture.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/from_range.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/stdio.h:
@@ -1593,6 +1672,8 @@ _deps/imgui-src/backends/imgui_impl_glfw.h:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/merge.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/print:
+
+_deps/assimp-src/include/assimp/scene.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__concepts/copyable.h:
 
@@ -1621,6 +1702,8 @@ _deps/imgui-src/backends/imgui_impl_glfw.h:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_fsblkcnt_t.h:
 
 /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glm/detail/type_quat.hpp:
+
+/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Math.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/functional:
 
@@ -1683,6 +1766,8 @@ _deps/imgui-src/imconfig.h:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/concepts.h:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/__stddef_wchar_t.h:
+
+_deps/assimp-src/include/assimp/Compiler/poppack1.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/array:
 
@@ -1837,6 +1922,8 @@ _deps/imgui-src/imconfig.h:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/system_error:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_standard_layout.h:
+
+_deps/assimp-src/include/assimp/vector3.h:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/__stdarg_va_arg.h:
 
@@ -2041,6 +2128,8 @@ _deps/imgui-src/imconfig.h:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/cfloat:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__split_buffer:
+
+_deps/assimp-src/include/assimp/MathFunctions.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/remove_volatile.h:
 
@@ -2250,6 +2339,8 @@ _deps/imgui-src/imconfig.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/machine/_endian.h:
 
+_deps/assimp-src/include/assimp/material.inl:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/typeinfo:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__hash_table:
@@ -2275,6 +2366,8 @@ _deps/imgui-src/imconfig.h:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_bounded_array.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_fd_def.h:
+
+_deps/assimp-src/include/assimp/camera.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/pthread/qos.h:
 
@@ -2303,6 +2396,8 @@ _deps/imgui-src/imconfig.h:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_unsigned.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/TargetConditionals.h:
+
+_deps/assimp-src/include/assimp/vector2.inl:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/fstream.h:
 
@@ -2409,6 +2504,8 @@ _deps/imgui-src/imconfig.h:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__debug_utils/sanitizers.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_time_t.h:
+
+_deps/assimp-src/include/assimp/mesh.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_nothrow_constructible.h:
 
@@ -2628,6 +2725,8 @@ _deps/imgui-src/imconfig.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__atomic/atomic_sync.h:
 
+_deps/assimp-src/include/assimp/metadata.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__math/gamma.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__atomic/atomic_lock_free.h:
@@ -2791,6 +2890,8 @@ _deps/imgui-src/imgui.h:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/concepts:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/find_if.h:
+
+_deps/assimp-src/include/assimp/color4.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__utility/pair.h:
 
@@ -3030,6 +3131,8 @@ _deps/imgui-src/imgui.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/sort_heap.h:
 
+_deps/assimp-src/include/assimp/matrix4x4.inl:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sched.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_types.h:
@@ -3067,6 +3170,8 @@ _deps/imgui-src/imgui.h:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__cstddef/byte.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/count_if.h:
+
+_deps/assimp-src/include/assimp/material.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_fd_isset.h:
 
