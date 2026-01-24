@@ -1,3 +1,0 @@
-/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/joltphysics-subbuild/CMakeFiles/joltphysics-populate.dir
-/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/joltphysics-subbuild/CMakeFiles/edit_cache.dir
-/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/joltphysics-subbuild/CMakeFiles/rebuild_cache.dir
