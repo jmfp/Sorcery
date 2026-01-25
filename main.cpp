@@ -147,7 +147,7 @@ int main()
     RigidBody* groundRigidBody = new RigidBody();
     groundRigidBody->SetBodyType(RigidBodyType::STATIC);
     // Ground is a flat box: wide X, thin Y (height), wide Z
-    groundRigidBody->SetShape(ShapeType::BOX, glm::vec3(100.0f, 0.5f, 100.0f));
+    groundRigidBody->SetShape(ShapeType::BOX, glm::vec3(100.0f, 0.0f, 100.0f));
     ground->AddComponent(groundRigidBody);
     groundRigidBody->Start();
     scene->AddGameObject(ground);
@@ -190,6 +190,7 @@ int main()
     AutoRotate* autoRotate = new AutoRotate(testObject->GetTransform(), 5.0f, Axis::Y);
     testObject->AddComponent(autoRotate);
     scene->AddGameObject(testObject);
+    scene->mainCamera->SetPosition(glm::vec3(0.0f, 20.0f, 20.0f));
 
     renderer.Render(&testShader, scene);
     return 0;
