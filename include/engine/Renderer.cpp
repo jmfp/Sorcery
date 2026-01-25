@@ -10,6 +10,8 @@
 #include <engine/Math.h>
 #include <engine/Scene.h>
 #include <engine/PhysicsSystem.h>
+#include <engine/CharacterController.h>
+#include <GLFW/glfw3.h>
 Renderer::Renderer(Window* window){
     this->window = window;
 }
@@ -29,7 +31,28 @@ void Renderer3D::Render(Shader* shader, Scene* scene){
         glfwGetFramebufferSize(window->GetWindow(), &framebufferWidth, &framebufferHeight);
         glViewport(0, 0, framebufferWidth, framebufferHeight);
 
-        window->ProcessInput(*scene->mainCamera, deltaTime);
+        // Find character controller and process input for it instead of camera
+        CharacterController* characterController = nullptr;
+        for (auto* gameObject : scene->GetGameObjects()) {
+            characterController = gameObject->GetComponent<CharacterController>();
+            if (characterController) {
+                break;
+            }
+        }
+        
+        if (characterController) {
+            // Process character input (WASD controls character)
+            characterController->ProcessInput(window->GetWindow(), deltaTime);
+            
+            // Attach camera to character's head position (first-person view)
+            glm::vec3 characterPosition = characterController->GetPosition();
+            // Offset upward for head position (character has halfHeight=1.0, so head is roughly at +1.0)
+            float headHeight = 1.0f; // Adjust this to match your character's head height
+            scene->mainCamera->SetPosition(characterPosition + glm::vec3(0.0f, headHeight, 0.0f));
+        } else {
+            // Fall back to camera controls if no character controller
+            window->ProcessInput(*scene->mainCamera, deltaTime);
+        }
 
         PhysicsSystem::GetInstance().Step(deltaTime);
 

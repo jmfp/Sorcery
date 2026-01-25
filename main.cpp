@@ -12,6 +12,7 @@
 #include <engine/AutoRotate.h>
 #include <engine/PhysicsSystem.h>
 #include <engine/RigidBody.h>
+#include <engine/CharacterController.h>
 
 int main()
 {
@@ -190,6 +191,24 @@ int main()
     AutoRotate* autoRotate = new AutoRotate(testObject->GetTransform(), 5.0f, Axis::Y);
     testObject->AddComponent(autoRotate);
     scene->AddGameObject(testObject);
+    
+    // Create character controller
+    GameObject* character = new GameObject();
+    character->AddComponent(meshRenderer); // Use cube mesh as visual representation
+    character->GetTransform()->SetPosition(glm::vec3(5.0f, 5.0f, 0.0f));
+    character->GetTransform()->SetScale(glm::vec3(0.5f, 1.0f, 0.5f)); // Make it capsule-like
+    
+    CharacterController* characterController = new CharacterController();
+    characterController->SetShapeSettings(1.0f, 0.5f); // halfHeight=1.0, radius=0.5
+    characterController->SetMaxSlopeAngle(45.0f);
+    characterController->SetMaxStrength(100.0f);
+    character->AddComponent(characterController);
+    characterController->Start();
+    
+    // Set initial velocity (you can modify this based on input)
+    characterController->SetLinearVelocity(glm::vec3(0.0f, 0.0f, 0.0f));
+    
+    scene->AddGameObject(character);
     scene->mainCamera->SetPosition(glm::vec3(0.0f, 20.0f, 20.0f));
 
     renderer.Render(&testShader, scene);

@@ -3263,6 +3263,30 @@ include/engine/Camera.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/engine/Camera.cpp.s
 .PHONY : include/engine/Camera.cpp.s
 
+include/engine/CharacterController.o: include/engine/CharacterController.cpp.o
+.PHONY : include/engine/CharacterController.o
+
+# target to build an object file
+include/engine/CharacterController.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/engine/CharacterController.cpp.o
+.PHONY : include/engine/CharacterController.cpp.o
+
+include/engine/CharacterController.i: include/engine/CharacterController.cpp.i
+.PHONY : include/engine/CharacterController.i
+
+# target to preprocess a source file
+include/engine/CharacterController.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/engine/CharacterController.cpp.i
+.PHONY : include/engine/CharacterController.cpp.i
+
+include/engine/CharacterController.s: include/engine/CharacterController.cpp.s
+.PHONY : include/engine/CharacterController.s
+
+# target to generate assembly for a file
+include/engine/CharacterController.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL.dir/build.make CMakeFiles/OpenGL.dir/include/engine/CharacterController.cpp.s
+.PHONY : include/engine/CharacterController.cpp.s
+
 include/engine/Component.o: include/engine/Component.cpp.o
 .PHONY : include/engine/Component.o
 
@@ -4118,6 +4142,9 @@ help:
 	@echo "... include/engine/Camera.o"
 	@echo "... include/engine/Camera.i"
 	@echo "... include/engine/Camera.s"
+	@echo "... include/engine/CharacterController.o"
+	@echo "... include/engine/CharacterController.i"
+	@echo "... include/engine/CharacterController.s"
 	@echo "... include/engine/Component.o"
 	@echo "... include/engine/Component.i"
 	@echo "... include/engine/Component.s"

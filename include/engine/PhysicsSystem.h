@@ -24,6 +24,8 @@ class PhysicsSystem {
 
         JPH::BodyInterface& GetBodyInterface() {return *bodyInterface;}
         JPH::PhysicsSystem* GetJoltPhysicsSystem() {return physicsSystem;}
+        const JPH::NarrowPhaseQuery& GetNarrowPhaseQuery() {return physicsSystem->GetNarrowPhaseQuery();}
+        JPH::TempAllocator* GetTempAllocator() {return tempAllocator;}
         SorceryContactListener* GetContactListener() {return contactListener;}
 
     private:

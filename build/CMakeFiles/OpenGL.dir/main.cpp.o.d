@@ -1375,4 +1375,5 @@ CMakeFiles/OpenGL.dir/main.cpp.o: \
   /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/joltphysics-src/Jolt/Physics/Collision/Shape/SphereShape.h \
   /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/joltphysics-src/Jolt/Physics/Body/BodyCreationSettings.h \
   /Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/joltphysics-src/Jolt/Physics/Body/BodyActivationListener.h \
-  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/RigidBody.h
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/RigidBody.h \
+  /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/CharacterController.h

@@ -769,6 +769,12 @@
 },
 {
   "directory": "/Users/jesseprice/Development/Personal/Britemune/OpenGL/build",
+  "command": "/usr/bin/c++ -DJPH_SHARED_LIBRARY -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glad -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/GLFW -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/KHR -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-build/code/../include -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/joltphysics-src -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=c++17 -arch arm64 -fvisibility=hidden -pthread -o CMakeFiles/OpenGL.dir/include/engine/CharacterController.cpp.o -c /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/CharacterController.cpp",
+  "file": "/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/CharacterController.cpp",
+  "output": "CMakeFiles/OpenGL.dir/include/engine/CharacterController.cpp.o"
+},
+{
+  "directory": "/Users/jesseprice/Development/Personal/Britemune/OpenGL/build",
   "command": "/usr/bin/c++ -DJPH_SHARED_LIBRARY -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glad -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/GLFW -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/KHR -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-build/code/../include -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/joltphysics-src -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=c++17 -arch arm64 -fvisibility=hidden -pthread -o CMakeFiles/OpenGL.dir/include/engine/Component.cpp.o -c /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Component.cpp",
   "file": "/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Component.cpp",
   "output": "CMakeFiles/OpenGL.dir/include/engine/Component.cpp.o"

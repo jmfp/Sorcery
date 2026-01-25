@@ -1,5 +1,8 @@
 build/
 .cache/
+build/*
+build/*.cmake
+build/*.make
 
 # CMake generated files
 CMakeCache.txt
