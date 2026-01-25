@@ -1,7 +1,21 @@
 #include <engine/Texture.h>
 #include <glad/glad.h>
 
-Texture::Texture() : textureID(0), data(nullptr), textureFilePath(nullptr), type(TextureType::DIFFUSE), width(0), height(0), nrChannels(0) {
+Texture::Texture() : textureFilePath(nullptr), type(TextureType::DIFFUSE), width(512), height(512), nrChannels(4) {
+    // No texture file path was provided so use the default texture
+    data = stbi_load("../src/textures/default_texture.png", &width, &height, &nrChannels, 0);
+    glGenTextures(1, &textureID);
+    glBindTexture(GL_TEXTURE_2D, textureID);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    if (data) {
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+        glGenerateMipmap(GL_TEXTURE_2D);
+    } else {
+        std::cerr << "Failed to load default texture!" << std::endl;
+    }
 }
 
 Texture::Texture(const char * textureFilePath, int width, int height, TextureType type) : type(type), textureFilePath(textureFilePath) {

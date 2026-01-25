@@ -40,8 +40,8 @@ class GameObject{
         Transform* GetTransform(){
             return transform;
         }
+        Transform* transform = new Transform();
     protected:
         std::vector<Component*> components, drawableComponents;
         std::vector<GameObject*> children;
-        Transform* transform = new Transform();
 };

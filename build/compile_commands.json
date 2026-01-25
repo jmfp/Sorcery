@@ -799,6 +799,12 @@
 },
 {
   "directory": "/Users/jesseprice/Development/Personal/Britemune/OpenGL/build",
+  "command": "/usr/bin/c++ -DJPH_SHARED_LIBRARY -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glad -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/GLFW -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/KHR -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-build/code/../include -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/joltphysics-src -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=c++17 -arch arm64 -fvisibility=hidden -pthread -o CMakeFiles/OpenGL.dir/include/engine/PhysicsSystem.cpp.o -c /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/PhysicsSystem.cpp",
+  "file": "/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/PhysicsSystem.cpp",
+  "output": "CMakeFiles/OpenGL.dir/include/engine/PhysicsSystem.cpp.o"
+},
+{
+  "directory": "/Users/jesseprice/Development/Personal/Britemune/OpenGL/build",
   "command": "/usr/bin/c++ -DJPH_SHARED_LIBRARY -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glad -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/GLFW -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/KHR -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-build/code/../include -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/joltphysics-src -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=c++17 -arch arm64 -fvisibility=hidden -pthread -o CMakeFiles/OpenGL.dir/include/engine/Procedural.cpp.o -c /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Procedural.cpp",
   "file": "/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Procedural.cpp",
   "output": "CMakeFiles/OpenGL.dir/include/engine/Procedural.cpp.o"
@@ -811,6 +817,12 @@
 },
 {
   "directory": "/Users/jesseprice/Development/Personal/Britemune/OpenGL/build",
+  "command": "/usr/bin/c++ -DJPH_SHARED_LIBRARY -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glad -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/GLFW -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/KHR -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-build/code/../include -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/joltphysics-src -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=c++17 -arch arm64 -fvisibility=hidden -pthread -o CMakeFiles/OpenGL.dir/include/engine/RigidBody.cpp.o -c /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/RigidBody.cpp",
+  "file": "/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/RigidBody.cpp",
+  "output": "CMakeFiles/OpenGL.dir/include/engine/RigidBody.cpp.o"
+},
+{
+  "directory": "/Users/jesseprice/Development/Personal/Britemune/OpenGL/build",
   "command": "/usr/bin/c++ -DJPH_SHARED_LIBRARY -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glad -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/GLFW -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/KHR -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-build/code/../include -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/joltphysics-src -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=c++17 -arch arm64 -fvisibility=hidden -pthread -o CMakeFiles/OpenGL.dir/include/engine/Scene.cpp.o -c /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Scene.cpp",
   "file": "/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Scene.cpp",
   "output": "CMakeFiles/OpenGL.dir/include/engine/Scene.cpp.o"
@@ -820,6 +832,12 @@
   "command": "/usr/bin/c++ -DJPH_SHARED_LIBRARY -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glad -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/GLFW -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/KHR -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-build/code/../include -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/joltphysics-src -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=c++17 -arch arm64 -fvisibility=hidden -pthread -o CMakeFiles/OpenGL.dir/include/engine/Shader.cpp.o -c /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Shader.cpp",
   "file": "/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/Shader.cpp",
   "output": "CMakeFiles/OpenGL.dir/include/engine/Shader.cpp.o"
+},
+{
+  "directory": "/Users/jesseprice/Development/Personal/Britemune/OpenGL/build",
+  "command": "/usr/bin/c++ -DJPH_SHARED_LIBRARY -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/glad -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/GLFW -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/KHR -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-src/code/../include -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/assimp-build/code/../include -I/Users/jesseprice/Development/Personal/Britemune/OpenGL/build/_deps/joltphysics-src -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=c++17 -arch arm64 -fvisibility=hidden -pthread -o CMakeFiles/OpenGL.dir/include/engine/SorceryContactListener.cpp.o -c /Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/SorceryContactListener.cpp",
+  "file": "/Users/jesseprice/Development/Personal/Britemune/OpenGL/include/engine/SorceryContactListener.cpp",
+  "output": "CMakeFiles/OpenGL.dir/include/engine/SorceryContactListener.cpp.o"
 },
 {
   "directory": "/Users/jesseprice/Development/Personal/Britemune/OpenGL/build",

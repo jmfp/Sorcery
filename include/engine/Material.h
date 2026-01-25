@@ -8,7 +8,12 @@
 class Material {
     public:
         Material(std::vector<Texture*> textures, float shininess = 32.0f) 
-            : textures(textures), shininess(shininess) {}
+            : textures(textures), shininess(shininess) {
+                // if no texture was provided, use the default texture. This might not be ideal for all cases.
+                if (textures.empty()) {
+                    textures.push_back(new Texture());
+                }
+            }
         
         Material() : shininess(32.0f) {}
         ~Material() {}
