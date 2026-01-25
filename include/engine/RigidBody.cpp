@@ -7,9 +7,11 @@
 #include <Jolt/Physics/Body/BodyLock.h>
 #include <Jolt/Physics/Collision/Shape/BoxShape.h>
 #include <Jolt/Physics/Collision/Shape/SphereShape.h>
+#include <Jolt/Math/Mat44.h>
 #define GLM_ENABLE_EXPERIMENTAL
 #include <glm/gtc/quaternion.hpp>
 #include <glm/gtx/quaternion.hpp>
+#include <glm/gtx/euler_angles.hpp>
 #include <algorithm>
 
 RigidBody::RigidBody()
@@ -45,15 +47,41 @@ void RigidBody::Start() {
     
     // Convert transform to Jolt format
     JPH::Vec3 position = GlmToJoltVec3(transform->position);
-    JPH::Quat rotation = GlmToJoltQuat(transform->rotation);
+    
+    // Build rotation matrix EXACTLY like Transform::getLocalModelMatrix() does
+    // Transform uses: Y * X * Z order
+    const glm::mat4 transformX = glm::rotate(glm::mat4(1.0f),
+                glm::radians(transform->rotation.x),
+                glm::vec3(1.0f, 0.0f, 0.0f));
+    const glm::mat4 transformY = glm::rotate(glm::mat4(1.0f),
+                glm::radians(transform->rotation.y),
+                glm::vec3(0.0f, 1.0f, 0.0f));
+    const glm::mat4 transformZ = glm::rotate(glm::mat4(1.0f),
+                glm::radians(transform->rotation.z),
+                glm::vec3(0.0f, 0.0f, 1.0f));
+    
+    // Y * X * Z (same as Transform)
+    const glm::mat4 rotationMatrix = transformY * transformX * transformZ;
+    
+    // Convert GLM matrix to Jolt Mat44 and extract quaternion using Jolt's method
+    // GLM and Jolt both use column-major matrices, so we can construct directly
+    const glm::mat4& m = rotationMatrix;
+    JPH::Mat44 joltMat(
+        JPH::Vec4(m[0][0], m[1][0], m[2][0], m[3][0]),  // Column 0
+        JPH::Vec4(m[0][1], m[1][1], m[2][1], m[3][1]),  // Column 1
+        JPH::Vec4(m[0][2], m[1][2], m[2][2], m[3][2]),  // Column 2
+        JPH::Vec4(m[0][3], m[1][3], m[2][3], m[3][3])   // Column 3
+    );
+    JPH::Quat rotation = joltMat.GetRotation().GetQuaternion();
     
     // Create body settings
+    JPH::ObjectLayer layer = (bodyType == RigidBodyType::STATIC) ? Layers::NON_MOVING : Layers::MOVING;
     JPH::BodyCreationSettings bodySettings(
         joltShape,
         position,
         rotation,
         GetJoltMotionType(),
-        Layers::MOVING  // Use appropriate layer
+        layer
     );
     
     // Configure mass for dynamic bodies
@@ -92,7 +120,15 @@ JPH::Vec3 RigidBody::GlmToJoltVec3(const glm::vec3& vec) const {
 }
 
 JPH::Quat RigidBody::GlmToJoltQuat(const glm::vec3& eulerDegrees) const {
-    glm::quat glmQuat = glm::quat(glm::radians(eulerDegrees));
+    glm::vec3 eulerRad = glm::radians(eulerDegrees);
+    
+    const glm::mat4 transformX = glm::rotate(glm::mat4(1.0f), eulerRad.x, glm::vec3(1.0f, 0.0f, 0.0f));
+    const glm::mat4 transformY = glm::rotate(glm::mat4(1.0f), eulerRad.y, glm::vec3(0.0f, 1.0f, 0.0f));
+    const glm::mat4 transformZ = glm::rotate(glm::mat4(1.0f), eulerRad.z, glm::vec3(0.0f, 0.0f, 1.0f));
+    
+    const glm::mat4 rotationMatrix = transformY * transformX * transformZ;
+    glm::quat glmQuat = glm::quat_cast(rotationMatrix);
+    
     return JPH::Quat(glmQuat.x, glmQuat.y, glmQuat.z, glmQuat.w);
 }
 
@@ -216,7 +252,32 @@ void RigidBody::SyncTransformToPhysics() {
     JPH::BodyInterface& bodyInterface = ::PhysicsSystem::GetInstance().GetBodyInterface();
     
     JPH::Vec3 position = GlmToJoltVec3(transform->position);
-    JPH::Quat rotation = GlmToJoltQuat(transform->rotation);
+    
+    // Build rotation matrix EXACTLY like Transform::getLocalModelMatrix() does
+    // Transform uses: Y * X * Z order
+    const glm::mat4 transformX = glm::rotate(glm::mat4(1.0f),
+                glm::radians(transform->rotation.x),
+                glm::vec3(1.0f, 0.0f, 0.0f));
+    const glm::mat4 transformY = glm::rotate(glm::mat4(1.0f),
+                glm::radians(transform->rotation.y),
+                glm::vec3(0.0f, 1.0f, 0.0f));
+    const glm::mat4 transformZ = glm::rotate(glm::mat4(1.0f),
+                glm::radians(transform->rotation.z),
+                glm::vec3(0.0f, 0.0f, 1.0f));
+    
+    // Y * X * Z (same as Transform)
+    const glm::mat4 rotationMatrix = transformY * transformX * transformZ;
+    
+    // Convert GLM matrix to Jolt Mat44 and extract quaternion using Jolt's method
+    // GLM and Jolt both use column-major matrices, so we can construct directly
+    const glm::mat4& m = rotationMatrix;
+    JPH::Mat44 joltMat(
+        JPH::Vec4(m[0][0], m[1][0], m[2][0], m[3][0]),  // Column 0
+        JPH::Vec4(m[0][1], m[1][1], m[2][1], m[3][1]),  // Column 1
+        JPH::Vec4(m[0][2], m[1][2], m[2][2], m[3][2]),  // Column 2
+        JPH::Vec4(m[0][3], m[1][3], m[2][3], m[3][3])   // Column 3
+    );
+    JPH::Quat rotation = joltMat.GetRotation().GetQuaternion();
     
     bodyInterface.SetPosition(bodyID, position, JPH::EActivation::DontActivate);
     bodyInterface.SetRotation(bodyID, rotation, JPH::EActivation::DontActivate);

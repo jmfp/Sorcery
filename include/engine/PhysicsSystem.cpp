@@ -40,6 +40,8 @@ void EnginePhysicsSystem::Initialize() {
     );
     bodyInterface = &physicsSystem->GetBodyInterface();
 
+    physicsSystem->SetGravity(JPH::Vec3(0.0f, -9.81f, 0.0f));
+
     contactListener = new SorceryContactListener();
     physicsSystem->SetContactListener(contactListener);
 }

@@ -10,6 +10,8 @@
 #include <engine/Texture.h>
 #include <engine/Material.h>
 #include <engine/AutoRotate.h>
+#include <engine/PhysicsSystem.h>
+#include <engine/RigidBody.h>
 
 int main()
 {
@@ -73,6 +75,10 @@ int main()
     // Initialize GLFW
     Window* window = new Window();
     window->Initialize("Sorcery Engine", 1920, 1080);
+    
+    // Initialize Physics System
+    PhysicsSystem::GetInstance().Initialize();
+    
     Shader testShader = Shader("shaders/point_light.vs", "shaders/lighting.fs");
     Renderer3D renderer = Renderer3D(window);
     Scene* scene = new Scene("Test Scene", window);
@@ -110,19 +116,77 @@ int main()
         0, 1, 2,
         2, 4, 0,
     };
+    
+    // Create ground plane vertices (facing up, Y+ normal)
+    std::vector<Vertex> groundVerts = {
+        Vertex(glm::vec3(-50.0f, 0.0f, -50.0f), glm::vec3(0.0f, 1.0f, 0.0f), glm::vec2(0.0f, 0.0f)),
+        Vertex(glm::vec3( 50.0f, 0.0f, -50.0f), glm::vec3(0.0f, 1.0f, 0.0f), glm::vec2(1.0f, 0.0f)),
+        Vertex(glm::vec3( 50.0f, 0.0f,  50.0f), glm::vec3(0.0f, 1.0f, 0.0f), glm::vec2(1.0f, 1.0f)),
+        Vertex(glm::vec3(-50.0f, 0.0f,  50.0f), glm::vec3(0.0f, 1.0f, 0.0f), glm::vec2(0.0f, 1.0f)),
+    };
+    std::vector<unsigned int> groundIndices = {
+        0, 1, 2,
+        2, 3, 0,
+    };
+    
     std::vector<unsigned int> indicesVec(indices, indices + sizeof(indices) / sizeof(indices[0]));
     Mesh* planeMesh = new Mesh(planeVerts, planeIndices, textures);
     Mesh* cubeMesh = new Mesh(boxVerts, indicesVec, textures);
+    Mesh* groundMesh = new Mesh(groundVerts, groundIndices, textures);
     MeshRenderer* meshRenderer = new MeshRenderer(cubeMesh, material);
     MeshRenderer* planeMeshRenderer = new MeshRenderer(planeMesh, material);
-    testObject->GetTransform()->SetPosition(glm::vec3(0.0f, 0.0f, 0.0f));
-    // testObject->AddComponent(meshRenderer);
+    MeshRenderer* groundMeshRenderer = new MeshRenderer(groundMesh, material);
+    
+    // Create ground at origin (0,0,0) with no rotation
+    GameObject* ground = new GameObject();
+    ground->AddComponent(groundMeshRenderer);
+    ground->GetTransform()->SetPosition(glm::vec3(0.0f, 0.0f, 0.0f));
+    ground->GetTransform()->SetScale(glm::vec3(1.0f, 1.0f, 1.0f));
+    ground->GetTransform()->SetRotation(glm::vec3(0.0f, 0.0f, 0.0f));
+    
+    RigidBody* groundRigidBody = new RigidBody();
+    groundRigidBody->SetBodyType(RigidBodyType::STATIC);
+    // Ground is a flat box: wide X, thin Y (height), wide Z
+    groundRigidBody->SetShape(ShapeType::BOX, glm::vec3(100.0f, 0.5f, 100.0f));
+    ground->AddComponent(groundRigidBody);
+    groundRigidBody->Start();
+    scene->AddGameObject(ground);
+    
+    // Create static floor FIRST (so it exists when box is created)
     GameObject* testFloor = new GameObject();
     testFloor->AddComponent(planeMeshRenderer);
-    testFloor->GetTransform()->SetPosition(glm::vec3(0.0f, -0.5f, 0.0f));
+    testFloor->GetTransform()->SetPosition(glm::vec3(0.0f, -0.25f, 0.0f));
     testFloor->GetTransform()->SetScale(glm::vec3(100.0f, 100.0f, 100.0f));
     testFloor->GetTransform()->SetRotation(glm::vec3(-90.0f, 0.0f, 0.0f));
+    
+    RigidBody* floorRigidBody = new RigidBody();
+    floorRigidBody->SetBodyType(RigidBodyType::STATIC);
+    // For a floor rotated -90 on X, the box dimensions should be: wide X, thin Y, wide Z
+    // But when rotated, thin Y becomes the "depth" - so we want a flat box
+    floorRigidBody->SetShape(ShapeType::BOX, glm::vec3(100.0f, 0.5f, 100.0f));
+    testFloor->AddComponent(floorRigidBody);
+    floorRigidBody->Start();
+    
+    // After Start, sync the rotation again to ensure it's applied
+    floorRigidBody->SyncTransformToPhysics();
+    
     scene->AddGameObject(testFloor);
+    
+    // Create falling box
+    GameObject* fallingBox = new GameObject();
+    fallingBox->AddComponent(meshRenderer);
+    fallingBox->GetTransform()->SetPosition(glm::vec3(0.0f, 20.0f, 0.0f));
+    fallingBox->GetTransform()->SetScale(glm::vec3(1.0f, 1.0f, 1.0f));
+    
+    RigidBody* boxRigidBody = new RigidBody();
+    boxRigidBody->SetBodyType(RigidBodyType::DYNAMIC);
+    boxRigidBody->SetMass(1.0f);
+    boxRigidBody->SetShape(ShapeType::BOX, glm::vec3(1.0f, 1.0f, 1.0f));
+    fallingBox->AddComponent(boxRigidBody);
+    boxRigidBody->Start();
+    scene->AddGameObject(fallingBox);
+    
+    testObject->GetTransform()->SetPosition(glm::vec3(0.0f, 0.0f, 0.0f));
     AutoRotate* autoRotate = new AutoRotate(testObject->GetTransform(), 5.0f, Axis::Y);
     testObject->AddComponent(autoRotate);
     scene->AddGameObject(testObject);

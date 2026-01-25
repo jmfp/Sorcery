@@ -9,6 +9,7 @@
 #include <engine/Mesh.h>
 #include <engine/Math.h>
 #include <engine/Scene.h>
+#include <engine/PhysicsSystem.h>
 Renderer::Renderer(Window* window){
     this->window = window;
 }
@@ -29,6 +30,8 @@ void Renderer3D::Render(Shader* shader, Scene* scene){
         glViewport(0, 0, framebufferWidth, framebufferHeight);
 
         window->ProcessInput(*scene->mainCamera, deltaTime);
+
+        PhysicsSystem::GetInstance().Step(deltaTime);
 
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
